@@ -36,4 +36,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
-figma desigm Desktop View: [Weaver Desktop View](figma)
+figma desigm Desktop View: [Weaver Desktop View]([figma](https://www.figma.com/design/8myxec6w5hwleSPA7v7u1X/Weaver---PC-UI?node-id=2-2&t=OxY8h7UZmRjHH9VG-1))
