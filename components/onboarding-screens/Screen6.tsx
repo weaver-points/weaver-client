@@ -2,18 +2,35 @@ import Image from "next/image";
 
 export default function OnboardScreen6() {
   return (
-    <div className="flex flex-col justify-center items-center space-y-5">
-      <p className="text-base" >
-        <span className="font-thin  text-gray-300">Lightweight</span>{" "}
-        <span className="font-bold text-white "> on-chain identity platform</span>
-      </p>
-      <Image
-        src="/first-group-image.svg"
-        alt="group-img-for-screen1"
-        height={128}
-        width={280}
-      />
-      <Image src="/weaver.webp" alt="weaver-logo" height={100} width={100} />
-    </div>
+    <div className="px-y min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-row items-center justify-between px-16  border border-[#414141] rounded-[20px] relative">
+            <small className="absolute top-[10%] right-[10%] text-[#5E5E5E] text-base font-[500] transition duration-300 hover:text-[#EDFFD0] cursor-pointer  " >Skip</small>
+         <Image
+              src="/connect-wallet-image.svg"
+              alt="group-img-for-screen1"
+              height={100}
+              width={100}
+              className="w-[280px] h-[500] object-contain  self-end "
+            />
+      
+            <div className="min-w-[335px] min-h-[230px]  flex flex-col items-center justify-between text-center text-white  ">
+      
+      
+      
+              <p className="flex flex-col items-center justify-center text-xl lg:text-[28px]   " >
+                <span className="font-light leading-8 " >
+                Connect Your
+                </span>
+                <span className="font-bold  leading-8 " >
+                Argent Wallet to
+                <br/>
+                Continue
+
+                </span>
+              </p>
+              <button className="w-full bg-[#EDFFD0] py-3 text-center text-base text-[#000000] font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1] " >Let’s get it🚀</button>
+            </div>
+      
+          </div>
   );
 }
+

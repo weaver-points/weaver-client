@@ -11,7 +11,7 @@ import OnboardScreen5 from "@/components/onboarding-screens/Screen5";
 import OnboardScreen6 from "@/components/onboarding-screens/Screen6";
 
 export default function Onboard() {
-  const onBoardSlides = [<OnboardScreen1 />, <OnboardScreen2 />, <OnboardScreen3/>, <OnboardScreen4/> ];
+  const onBoardSlides = [<OnboardScreen1 />, <OnboardScreen2 />, <OnboardScreen3/>, <OnboardScreen4/>, <OnboardScreen5/>, <OnboardScreen6/> ];
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-[#0D0D0D] ">
