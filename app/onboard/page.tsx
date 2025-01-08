@@ -10,7 +10,7 @@ export default function Onboard() {
   const onBoardSlides = [<OnboardScreen1 />, <OnboardScreen2 />];
 
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen flex justify-center items-center bg-[#0D0D0D] ">
       <Swiper
         modules={[Autoplay]}
         autoplay={{
