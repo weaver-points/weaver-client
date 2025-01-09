@@ -18,7 +18,7 @@ export default function OnboardScreen1() {
         height={128}
         width={280}
       />
-      <Image src="/weaver.webp" alt="weaver-logo" height={100} width={100} />
+      <Image src="/weaver-logo.svg" alt="weaver-logo" height={100} width={100} />
     </div>
   );
 }
