@@ -3,9 +3,14 @@ import Image from "next/image";
 export default function OnboardScreen1() {
   return (
     <div className="flex flex-col justify-center items-center space-y-5">
-      <p className="text-base" >
-        <span className="font-thin  text-gray-300">Lightweight</span>{" "}
-        <span className="font-bold text-white "> on-chain identity platform</span>
+      <p className="text-base">
+        <span className="font-thin  text-gray-300 font-satoshi">
+          Lightweight
+        </span>{" "}
+        <span className="font-bold text-white ">
+          {" "}
+          on-chain identity platform
+        </span>
       </p>
       <Image
         src="/first-group-image.svg"
