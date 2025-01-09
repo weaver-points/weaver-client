@@ -7,6 +7,18 @@ import Image from "next/image";
 
 export default function StatsBox () {
 
+
+    const rank = 30;
+    const totalRank = 50
+
+
+
+     const percentage =  
+        (rank/totalRank) * 100/1
+
+        console.log(percentage)
+    
+
     return(
 
 
@@ -17,7 +29,7 @@ export default function StatsBox () {
 
         <span className="flex flex-row justify-center items-end gap-7 " > <h1 className="text-7xl font-medium" >259</h1>
         <Image src ="/tangler-badge.svg"
-        alt=""
+        alt="badge"
         width={100}
         height={100}
         className="w-[60.9px] h-[67.62px] object-contain "
@@ -31,9 +43,40 @@ export default function StatsBox () {
 
 
             <p>
-                <span className="text-[#808080] font-light mr-3 ">Rank: </span>  <span className="text-[#808080] font-light "> 30/</span>50
+                <span className="text-[#808080] font-light mr-3 ">Rank: </span>  <span className="text-[#808080] font-light "> {rank}/</span>{totalRank}
             </p>
          </div>
+       </div>
+
+       <div className="metre w-full h-[120px] bg-[#1D1D1D] mt-8 flex flex-col  ">
+
+
+        <div className="metre-bar w-full relative bg-white h-[13.09px] overflow-hidden ">
+            <span className="absolute top-0 left-0 bg-[#C4FF63] h-full" 
+            style={{
+                width: `${percentage}%`
+            }} 
+            ></span>
+        </div>
+
+        <div className="NFT w-full h-full flex flex-row justify-between ">
+
+            <div className="text flex flex-col justify-center px-5 text-xs border-l border-[#636363] ml-10 ">
+                <h2 className="font-medium " >To mint Tarauntula</h2>
+                <h3 className="text-[#787272] " >Complete challange to mint Tarauntula</h3>
+            </div>
+
+           <div className="h-full bg-white flex items-center justify-center w-[101.93px] " >
+           <Image 
+            src="/TanglerNFT.svg"
+            alt="tangler"
+            width={100}
+            height={100}
+            className="w-[54.21] h-[57.93] object-contain "
+            />
+           </div>
+        </div>
+
        </div>
 
 
