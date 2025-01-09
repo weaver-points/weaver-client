@@ -1,6 +1,12 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import ConnectWalletModal from "@/components/ConnectWalletModal";
 
 export default function RegisterUser() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="font-satoshi  min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-row items-center justify-between px-12  border border-[#414141] rounded-[20px] relative">
       <Image
@@ -20,9 +26,13 @@ export default function RegisterUser() {
             Weaver
           </span>
         </p>
-        <button className="w-full bg-[#EDFFD0] py-3 text-center text-base text-[#000000] font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1] ">
+        <button
+          className="w-full bg-[#EDFFD0] py-3 text-center text-base text-[#000000] font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1]"
+          onClick={() => setIsModalOpen(true)}
+        >
           Mint
         </button>
+        {isModalOpen && <ConnectWalletModal onCloseModal={setIsModalOpen} />}
       </div>
     </div>
   );

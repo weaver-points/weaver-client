@@ -1,5 +1,6 @@
 "use client";
 
+import ConnectWalletModal from "@/components/ConnectWalletModal";
 import StatsBox from "@/components/StatsBox";
 import Image from "next/image";
 
@@ -30,6 +31,7 @@ export default function Dashboard() {
           </div>
         </div>
         <StatsBox />
+        <ConnectWalletModal />
       </div>
     </div>
   );
