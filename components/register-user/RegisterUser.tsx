@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function RegisterUser() {
   return (
-    <div className="font-satoshi px-y min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-row items-center justify-between px-16  border border-[#414141] rounded-[20px] relative">
+    <div className="font-satoshi  min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-row items-center justify-between px-12  border border-[#414141] rounded-[20px] relative">
       <Image
         src="/RegisterUser.svg"
         alt="group-img-for-screen1"
