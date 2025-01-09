@@ -5,10 +5,13 @@ import { FaChevronDown } from "react-icons/fa";
 export default function NftContainer() {
 
     const [contentHeight, setContentHeight] = useState("100px")
-    const [rotateArrow, setRotateArrow] = useState("90deg")
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const showContent = () => {
         setContentHeight((prevContentHeight) => (prevContentHeight === "100px" ? "auto" : "100px") )
+        setIsExpanded((prevIsExpanded) => !prevIsExpanded)
+
+        console.log(isExpanded)
     }
   return (
     <div className="w-full ">
@@ -43,7 +46,7 @@ export default function NftContainer() {
 
             </div>
 
-            <FaChevronDown  />
+            <FaChevronDown className={` transform transition-all duration-300 ${isExpanded ? "rotate-[180deg]" : "rotate-[0] "} `}  />
         </header>
       </div>
     </div>
