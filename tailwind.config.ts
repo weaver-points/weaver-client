@@ -13,9 +13,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        satoshi: ["var(--font-satoshi)"],
+        satoshi: ["var(--font-satoshi)", "sans-serif"],
       },
-      
     },
   },
   plugins: [],

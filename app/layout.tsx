@@ -5,7 +5,7 @@ import "./globals.css";
 const satoshi = localFont({
   src: "./fonts/Satoshi-Variable.woff",
   variable: "--font-satoshi",
-  weight: "100 900",
+  weight: "300 900",
 });
 
 export const metadata: Metadata = {
