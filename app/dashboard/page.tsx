@@ -1,8 +1,13 @@
-"use client";
+"use client"
 
-import ConnectWalletModal from "@/components/ConnectWalletModal";
-import StatsBox from "@/components/StatsBox";
-import Image from "next/image";
+import StatsBox from "@/components/StatsBox"
+import Image from "next/image"
+
+
+
+
+
+
 
 export default function Dashboard() {
   return (
@@ -17,22 +22,19 @@ export default function Dashboard() {
           />
           <div className="flex flex-row items-center justify-between w-full gap-3">
             <Image
-              src="/first-group-image.svg"
-              alt="group-img-for-screen1"
-              height={128}
-              width={280}
-              className="w-[210px] h-[85px] "
-            />
-            <p className=" text-xl ">
-              <span className="font-light "> Lightweight </span> <br />
-              on-chain identity <br />
-              platform
-            </p>
-          </div>
-        </div>
-        <StatsBox />
-        <ConnectWalletModal />
-      </div>
+                    src="/first-group-image.svg"
+                    alt="group-img-for-screen1"
+                    height={128}
+                    width={280}
+                    className="w-[210px] h-[85px] "
+                  />
+                  <p className=" text-xl " >
+                  <span className="font-light " > Lightweight </span> <br/>
+                  on-chain identity <br/>
+                   platform
+                  </p>
+         </div>
+
     </div>
   );
 }
