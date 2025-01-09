@@ -7,7 +7,7 @@ export default function OnboardScreen4() {
     swiper?.slideTo(6);
   };
   return (
-    <div className="px-y min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-row items-center justify-between px-16  border border-[#414141] rounded-[20px] relative">
+    <div className="font-satoshi px-y min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-row items-center justify-between px-16  border border-[#414141] rounded-[20px] relative">
       <small
         className="absolute top-[10%] right-[10%] text-[#5E5E5E] text-base font-[500] transition duration-300 hover:text-[#EDFFD0] cursor-pointer  "
         onClick={skipToLast}
@@ -22,8 +22,8 @@ export default function OnboardScreen4() {
         className="w-[280px] h-[500] object-contain  self-end "
       />
 
-      <div className="min-w-[335px] min-h-[230px]  flex flex-col items-center justify-between text-center text-white  ">
-        <p className="flex flex-col items-center justify-center text-xl lg:text-[28px]   ">
+      <div className="min-w-[200px] max-w-[335px] w-[17.43vw]  min-h-[230px]  flex flex-col items-center justify-between text-center text-white  ">
+        <p className="flex flex-col items-center justify-center text-xl lg:text-[24px]   ">
           <span className="font-light leading-8 ">On-Chain</span>
           <span className="font-bold  leading-8 ">
             Point-Based Reward <br /> Protocol on Starknet
