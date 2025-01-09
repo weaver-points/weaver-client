@@ -1,5 +1,6 @@
 "use client";
 
+import NftContainer from "@/components/NftContainer";
 import StatsBox from "@/components/StatsBox";
 import Image from "next/image";
 
@@ -9,6 +10,7 @@ export default function Dashboard() {
       <div className="max-w-[652px] w-full flex flex-col items-center justify-start gap-10 ">
         <div className="flex flex-col items-center justify-center gap-7 max-w-[390.17px] max-h-[150px] ">
           <Image
+
             src="/weaver-logo.svg"
             alt="weaver-logo"
             height={100}
@@ -30,7 +32,15 @@ export default function Dashboard() {
           </div>
         </div>
         <StatsBox />
+
+        <NftContainer/>
       </div>
     </div>
   );
 }
+
+
+
+
+
+
