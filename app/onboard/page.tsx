@@ -1,7 +1,7 @@
 "use client";
 
 import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import OnboardScreen1 from "@/components/onboarding-screens/Screen1";
 import OnboardScreen2 from "@/components/onboarding-screens/Screen2";
@@ -33,11 +33,12 @@ export default function Onboard() {
         }}
         spaceBetween={50}
         slidesPerView={1}
-        loop={false}
+        loop={false} 
+        className=" h-screen"
       >
         {onBoardSlides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className=" flex justify-center items-center">{slide}</div>
+            <div className=" h-screen w-full flex justify-center items-center">{slide}</div>
           </SwiperSlide>
         ))}
       </Swiper>
