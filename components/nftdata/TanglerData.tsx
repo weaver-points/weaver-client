@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FaChevronDown } from "@/utils/icons";
+import 'animate.css';
 
 type NftItem = {
   name: string;
@@ -56,7 +57,7 @@ export default function TanglerData() {
 
   return (
     <div
-      className="overflow-hidden bg-[#121212] border-2 border-[#1D1D1D] w-full  my-4 rounded-t-[10px] rounded-b-none px-5 py-5  flex flex-col gap-7 items-center justify-start mt-6 transition duration-300   "
+      className="animate__animated animate__zoomIn overflow-hidden bg-[#121212] border-2 border-[#1D1D1D] w-full  my-4 rounded-t-[10px] rounded-b-none px-5 py-5  flex flex-col gap-7 items-center justify-start mt-6 transition duration-300   "
       style={{
         height: contentHeight,
       }}

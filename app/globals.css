@@ -28,3 +28,6 @@ body {
   background-color: #c4ff63;
   border-radius: 4px;
 }
+.animate__animated.animate__zoomIn {
+  --animate-duration: 0.3s;
+}
