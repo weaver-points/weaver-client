@@ -25,13 +25,13 @@ export default function TaskBox() {
             isExpanded ? "border-l border-gray-700" : ""
           } w-full`}
         >
-          <div className="flex justify-between items-center w-full pl-3">
+          <div    onClick={() => setIsExpanded(!isExpanded)} className="flex justify-between items-center w-full pl-3 cursor-pointer ">
             <h2>Connect Telegram</h2>
             <FaChevronDown
               className={` transform transition-all duration-300 cursor-pointer ${
                 isExpanded ? "rotate-[180deg]" : "rotate-[0] "
               } `}
-              onClick={() => setIsExpanded(!isExpanded)}
+            
             />
           </div>
           <p className="font-thin text-secondary pl-3 w-full">

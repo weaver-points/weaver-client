@@ -2,14 +2,24 @@ import Image from "next/image";
 import React from "react";
 
 export default function TaskStats() {
+
+  const point = 50
+  const totalPoint = 100
+
+
+
+
+
+
+
   return (
     <div className="bg-[#121212] border-2 border-[#1D1D1D] w-full space-y-5 h-auto my-4 rounded-t-[10px] rounded-b-none px-10 py-5">
       <div>
         <div className="flex justify-between font-light">
           <p>Total Points</p>
-          <p>40/100</p>
+          <p>{point}/{totalPoint}</p>
         </div>
-        <progress value={40} max={100} className="taskProgressBar w-full" />
+        <progress value={point} max={100} className="taskProgressBar w-full" />
         <p className="text-sm font-medium text-secondary">
           Build and verify digital reputation without having to sacrifice user
           privacy.
