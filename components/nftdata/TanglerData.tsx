@@ -2,7 +2,46 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown } from "@/utils/icons";
+
+type NftItem = {
+  name: string;
+  point: number;
+  status: boolean;
+  description: string;
+  category: string;
+  image: string;
+};
+
+const Nft: NftItem[] = [
+  {
+    name: "Transaction History",
+    description:
+      "Weaver will measure its success based on the amount of transactions on Starknet",
+    point: 10,
+    status: true,
+    category: "Tangler",
+    image: "/transaction.svg",
+  },
+  {
+    name: "Stake History",
+    description:
+      "Weaver will measure its success based on the amount of transactions on Starknet",
+    point: 10,
+    status: true,
+    category: "Tangler",
+    image: "/staking.svg",
+  },
+  {
+    name: "Mint History",
+    description:
+      "Weaver will measure its success based on the amount of transactions on Starknet",
+    point: 10,
+    status: true,
+    category: "Tangler",
+    image: "/mint.svg",
+  },
+];
 
 export default function TanglerData() {
   const [contentHeight, setContentHeight] = useState("100px");
@@ -15,44 +54,6 @@ export default function TanglerData() {
     setIsExpanded((prevIsExpanded) => !prevIsExpanded);
   };
 
-  type NftItem = {
-    name: string;
-    point: number;
-    status: boolean;
-    description: string;
-    category: string;
-    image: string;
-  };
-
-  const Nft: NftItem[] = [
-    {
-      name: "Transaction History",
-      description:
-        "Weaver will measure its success based on the amount of transactions on Starknet",
-      point: 10,
-      status: true,
-      category: "Tangler",
-      image: "/transaction.svg",
-    },
-    {
-      name: "Stake History",
-      description:
-        "Weaver will measure its success based on the amount of transactions on Starknet",
-      point: 10,
-      status: true,
-      category: "Tangler",
-      image: "/staking.svg",
-    },
-    {
-      name: "Mint History",
-      description:
-        "Weaver will measure its success based on the amount of transactions on Starknet",
-      point: 10,
-      status: true,
-      category: "Tangler",
-      image: "/mint.svg",
-    },
-  ];
   return (
     <div
       className="overflow-hidden bg-[#121212] border-2 border-[#1D1D1D] w-full  my-4 rounded-t-[10px] rounded-b-none px-5 py-5  flex flex-col gap-7 items-center justify-start mt-6 transition duration-300   "

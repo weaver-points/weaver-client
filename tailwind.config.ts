@@ -15,6 +15,9 @@ export default {
       fontFamily: {
         satoshi: ["var(--font-satoshi)", "sans-serif"],
       },
+      textColor: {
+        secondary: "#808080",
+      },
     },
   },
   plugins: [],
