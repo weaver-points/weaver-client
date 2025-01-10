@@ -1,10 +1,19 @@
 "use client";
 
 import { FaTelegramPlane, FaChevronDown } from "@/utils/icons";
-import { useState } from "react";
+import React, { useState } from "react";
 
+interface TaskBoxProps {
+  taskName: string;
+  icon: React.ReactNode;
+  backgroundColor: string;
+}
 
-export default function TaskBox() {
+export default function TaskBox({
+  icon,
+  taskName,
+  backgroundColor,
+}: TaskBoxProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const fullText =
@@ -17,8 +26,10 @@ export default function TaskBox() {
   return (
     <div className="bg-[#121212] border-2 border-[#1D1D1D] w-full h-auto rounded-t-[10px] rounded-b-none px-10 py-5">
       <div className="flex space-x-5">
-        <div className="bg-[#33BEF0] w-fit h-fit p-2 rounded-full flex items-center justify-center">
-          <FaTelegramPlane size={30} className="" />
+        <div
+          className={`${backgroundColor} w-fit h-fit p-2 rounded-full flex items-center justify-center`}
+        >
+          {icon}
         </div>
 
         <div
@@ -26,13 +37,15 @@ export default function TaskBox() {
             isExpanded ? "border-l border-gray-700" : ""
           } w-full`}
         >
-          <div    onClick={() => setIsExpanded(!isExpanded)} className="flex justify-between items-center w-full pl-3 cursor-pointer ">
-            <h2>Connect Telegram</h2>
+          <div
+            className="flex justify-between items-center w-full pl-3 cursor-pointer"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            <h2>Connect {taskName}</h2>
             <FaChevronDown
-              className={` transform transition-all duration-300 cursor-pointer ${
+              className={` transform transition-all duration-300  ${
                 isExpanded ? "rotate-[180deg]" : "rotate-[0] "
               } `}
-            
             />
           </div>
           <p className="font-thin text-secondary pl-3 w-full">
@@ -63,7 +76,7 @@ export default function TaskBox() {
         <button
           className={`py-5 w-full bg-[#EDFFD0] text-[#000000] text-base font-medium rounded-lg transform transition duration-300 hover:scale-[1.02] mt-5`}
         >
-          Connect Telegram
+          Connect {taskName}
         </button>
       )}
     </div>

@@ -2,6 +2,12 @@
 import TaskBox from "@/components/TaskBox";
 import TaskStats from "@/components/TaskStats";
 import Image from "next/image";
+import {
+  FaTelegramPlane,
+  FaDiscord,
+  FaXTwitter,
+  FiGithub,
+} from "@/utils/icons";
 
 export default function Tasks() {
   return (
@@ -30,10 +36,31 @@ export default function Tasks() {
           </div>
         </div>
         <TaskStats />
-        <TaskBox />
-        <TaskBox />
-        <TaskBox />
-        <TaskBox />
+        <TaskBox
+          backgroundColor="bg-[#33BEF0]"
+          icon={<FaTelegramPlane size={30} />}
+          taskName="Telegram"
+        />
+        <TaskBox
+          backgroundColor="bg-[#EDEDED]"
+          icon={<FaXTwitter size={30} className="text-black" />}
+          taskName="Twitter"
+        />
+        <TaskBox
+          backgroundColor="bg-[#EDEDED]"
+          icon={<FaDiscord size={30} className="text-[#8C9EFF]" />}
+          taskName="Discord"
+        />
+        <TaskBox
+          backgroundColor="bg-black"
+          icon={<FiGithub size={30} />}
+          taskName="Github"
+        />
+        <TaskBox
+          backgroundColor="bg-[#EDEDED]"
+          icon={<FaDiscord size={30} className="text-[#8C9EFF]" />}
+          taskName="Discord"
+        />
       </div>
     </div>
   );
