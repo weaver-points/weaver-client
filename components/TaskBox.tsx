@@ -15,6 +15,7 @@ export default function TaskBox({
   backgroundColor,
 }: TaskBoxProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isComplete, setIsComplete] = useState(true);
 
   const fullText =
     "StarkPoint will measure its success based on the growth in user interactions over time";
@@ -66,7 +67,7 @@ export default function TaskBox({
               </div>
               <p className="space-x-2 pl-3">
                 <span className="font-thin text-secondary">Status:</span>
-                <span>Done</span>
+                <span>{isComplete? " Done" : "pending"} </span>
               </p>
             </div>
           )}
