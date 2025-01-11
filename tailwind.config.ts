@@ -12,6 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        satoshi: ["var(--font-satoshi)", "sans-serif"],
+      },
+      textColor: {
+        secondary: "#808080",
+      },
     },
   },
   plugins: [],

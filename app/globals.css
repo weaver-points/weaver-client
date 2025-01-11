@@ -17,5 +17,17 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.taskProgressBar::-webkit-progress-bar {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+.taskProgressBar::-webkit-progress-value {
+  background-color: #c4ff63;
+  border-radius: 4px;
+}
+.animate__animated.animate__zoomIn {
+  --animate-duration: 0.3s;
 }
