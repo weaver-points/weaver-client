@@ -37,3 +37,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 figma desigm Desktop View: [Weaver Desktop View](https://www.figma.com/design/8myxec6w5hwleSPA7v7u1X/Weaver---PC-UI?node-id=2-2&t=OxY8h7UZmRjHH9VG-1)
+
+Figma desktop onboarding view design: [Weaver onboarding flow](https://www.figma.com/design/wEV47dLGdhsu8GbfkpeAVc/Weaver---Onboarding?m=auto&t=FoM7vbyzwjZT62ZE-6)
