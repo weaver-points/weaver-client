@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FaChevronDown } from "@/utils/icons";
-import 'animate.css';
+import "animate.css";
 
 type NftItem = {
   name: string;
@@ -67,13 +67,13 @@ export default function TanglerData() {
         className=" title w-full flex flex-row items-center justify-between cursor-pointer "
       >
         <div className="flex flex-row items-center gap-5">
-          <div className="w-[57px] h-[57px] rounded-full bg-white relative  ">
+          <div className="w-[57px] h-[57px] flex justify-center items-center rounded-full bg-white relative  ">
             <Image
               src="/TanglerNFT.svg"
               alt="NFT"
               width={100}
               height={100}
-              className="w-[45px] h-[45px] object-contain absolute top-[20%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]   "
+              className="w-[45px] h-[45px]"
             />
           </div>
           <h1>Tangler</h1>
