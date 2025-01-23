@@ -1,38 +1,46 @@
 import { useState } from "react";
-import TanglerData from "./nftdata/TanglerData";
 import OrbiterData from "./nftdata/OrbiterData";
+import FunnelerData from "./nftdata/FunnelerData";
+import TanglerData from "./nftdata/TanglerData";
 
 export default function NftContainer() {
   const [currentNFt, setCurrentNft] = useState("TanglerData");
 
-  function handleTangler() {
-    setCurrentNft("TanglerData");
-  }
-
-  function handleOrbiter() {
-    setCurrentNft("OrbiterData");
+  function toggleCurrentNft(nft: string) {
+    setCurrentNft(nft);
   }
 
   return (
     <div className="w-full">
       <ul className="flex flex-row items-center gap-6 py-1 pb-2 border-b-2 border-[#1D1D1D] my-2">
         <li
-          onClick={handleTangler}
+          onClick={() => toggleCurrentNft("TanglerData")}
           className={`px-3 cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300 ${
-            currentNFt === "TanglerData" ? "text-white after:w-full" : "text-[#818181]"
+            currentNFt === "TanglerData"
+              ? "text-white after:w-full"
+              : "text-[#818181]"
           }`}
         >
           Tangler
         </li>
         <li
-          onClick={handleOrbiter}
+          onClick={() => toggleCurrentNft("OrbiterData")}
           className={`px-3 cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300 ${
-            currentNFt === "OrbiterData" ? "text-white after:w-full" : "text-[#818181]"
+            currentNFt === "OrbiterData"
+              ? "text-white after:w-full"
+              : "text-[#818181]"
           }`}
         >
           Orbiter
         </li>
-        <li className="px-3 text-[#818181] cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300">
+        <li
+          onClick={() => toggleCurrentNft("FunnelerData")}
+          className={`px-3 text-[#818181] cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300${
+            currentNFt === "FunnelerData"
+              ? "text-white after:w-full"
+              : "text-[#818181]"
+          }`}
+        >
           Funneler
         </li>
         <li className="px-3 text-[#818181] cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300">
@@ -40,9 +48,9 @@ export default function NftContainer() {
         </li>
       </ul>
 
-      
       {currentNFt === "TanglerData" && <TanglerData />}
       {currentNFt === "OrbiterData" && <OrbiterData />}
+      {currentNFt === "FunnelerData" && <FunnelerData />}
     </div>
   );
 }
