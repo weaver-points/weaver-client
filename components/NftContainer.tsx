@@ -15,7 +15,7 @@ export default function NftContainer() {
       <ul className="flex flex-row items-center gap-6 py-1 pb-2 border-b-2 border-[#1D1D1D] my-2">
         <li
           onClick={() => toggleCurrentNft("TanglerData")}
-          className={`px-3 cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300 ${
+          className={`text-xs lg:text-base lg:px-3 px2 cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300 ${
             currentNFt === "TanglerData"
               ? "text-white after:w-full"
               : "text-[#818181]"
@@ -25,7 +25,7 @@ export default function NftContainer() {
         </li>
         <li
           onClick={() => toggleCurrentNft("OrbiterData")}
-          className={`px-3 cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300 ${
+          className={`text-xs lg:text-base lg:px-3 px2 cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300 ${
             currentNFt === "OrbiterData"
               ? "text-white after:w-full"
               : "text-[#818181]"
@@ -35,7 +35,7 @@ export default function NftContainer() {
         </li>
         <li
           onClick={() => toggleCurrentNft("FunnelerData")}
-          className={`px-3 text-[#818181] cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300${
+          className={`text-xs lg:text-base lg:px-3 px2 text-[#818181] cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300${
             currentNFt === "FunnelerData"
               ? "text-white after:w-full"
               : "text-[#818181]"
@@ -43,7 +43,7 @@ export default function NftContainer() {
         >
           Funneler
         </li>
-        <li className="px-3 text-[#818181] cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300">
+        <li className="text-xs lg:text-base  lg:px-3 px2 text-[#818181] cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover:text-white transition-all duration-300">
           Ekubo-Weaver Badge
         </li>
       </ul>
