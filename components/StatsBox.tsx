@@ -7,7 +7,7 @@ export default function StatsBox() {
   const percentage = ((rank / totalRank) * 100) / 1;
 
   return (
-    <div className="bg-[#121212] border-2 border-[#1D1D1D] w-full h-auto my-4 rounded-t-[10px] rounded-b-none px-10 py-5 max-h-[285.38] flex flex-col items-center justify-center ">
+    <div className=" border-2 border-[#1D1D1D] w-full h-auto my-4 rounded-t-[10px] rounded-b-none px-10 py-5 max-h-[285.38] flex flex-col items-center justify-center dark:bg-[#121212] dark:text-white">
       <div className="flex flex-col items-center justify-center  w-4/5 gap-2">
         <span className="flex flex-row justify-center items-end gap-7 ">
           {" "}

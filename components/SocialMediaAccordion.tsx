@@ -20,7 +20,7 @@ function SocialMediaAccordion({
 }) {
   return (
     <div
-      className="animate__animated animate__zoomIn overflow-hidden bg-[#121212] border-2 border-[#1D1D1D] w-full rounded-t-[10px] rounded-b-none px-[20px] md:px-[30px] py-6 md:pb-[30px] md:pt-9 flex flex-col gap-7 items-center justify-start"
+      className="animate__animated animate__zoomIn overflow-hidden  border-2 border-[#1D1D1D] w-full rounded-t-[10px] rounded-b-none px-[20px] md:px-[30px] py-6 md:pb-[30px] md:pt-9 flex flex-col gap-7 items-center justify-start dark:bg-[#121212] dark:text-white"
       style={{
         height: isExpanded ? "auto" : "120px",
       }}
@@ -41,7 +41,7 @@ function SocialMediaAccordion({
               } border-[#636363] transition-all duration-300`}
             >
               <div>
-                <h1 className="font-bold text-sm md:text-base text-[#F0F0F0]">
+                <h1 className="font-bold text-sm md:text-base ">
                   Connect {social.name}
                 </h1>
                 <p className="text-xs md:text-sm leading-5 text-[#808080] max-w-[220px] md:max-w-[293px]">
