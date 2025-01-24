@@ -52,7 +52,7 @@ export default function Onboard() {
             <div className="h-screen w-full flex justify-center items-center relative">
               {slide}
               <div className="absolute bottom-1/2 transform translate-y-1/2 left-0 right-0 flex justify-between px-4 z-10">
-                {currentSlide > 0 && (
+                {currentSlide > 1 && (
                   <button
                     onClick={handlePrev}
                     className="text-white bg-blue-500 p-2 rounded-full shadow-lg"
@@ -61,7 +61,7 @@ export default function Onboard() {
                   </button>
                 )}
 
-                {currentSlide < 6 && (
+                {currentSlide > 1 && currentSlide < 6 && (
                   <button
                     onClick={handleNext}
                     className="text-white bg-blue-500 p-2 rounded-full shadow-lg ml-auto"
