@@ -1,9 +1,8 @@
 "use client";
-
-import { useEffect, useState } from "react";
-import { Autoplay } from "swiper/modules";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { HiOutlineChevronRight, HiOutlineChevronLeft } from "react-icons/hi";
 import OnboardScreen1 from "@/components/onboarding-screens/Screen1";
 import OnboardScreen2 from "@/components/onboarding-screens/Screen2";
 import OnboardScreen3 from "@/components/onboarding-screens/Screen3";
@@ -13,16 +12,12 @@ import OnboardScreen6 from "@/components/onboarding-screens/Screen6";
 import RegisterUser from "@/components/register-user/RegisterUser";
 
 export default function Onboard() {
-  const [showSplash, setShowSplash] = useState(0);
-
-  useEffect(()=>{
-    if(showSplash < 2){
-      const timer = setTimeout(()=> setShowSplash(prev => prev + 1 ), 1000);
-      return ()=> clearTimeout(timer);
-    }
-  }, [showSplash]);
+  const [swiper, setSwiper] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const onBoardSlides = [
+    <OnboardScreen1 />,
+    <OnboardScreen2 />,
     <OnboardScreen3 />,
     <OnboardScreen4 />,
     <OnboardScreen5 />,
@@ -30,31 +25,52 @@ export default function Onboard() {
     <RegisterUser />,
   ];
 
-  if(showSplash === 0){ 
-    return  <div className="h-screen w-full flex justify-center items-center"><OnboardScreen1 /></div>
-  }
+  const handleNext = () => {
+    if (swiper) {
+      swiper.slideNext();
+    }
+  };
 
-  if(showSplash === 1){
-    return <div className="h-screen w-full flex justify-center items-center"> <OnboardScreen2 /></div>
-  }
+  const handlePrev = () => {
+    if (swiper) {
+      swiper.slidePrev();
+    }
+  };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-[#0D0D0D] ">
+    <div className="min-h-screen flex justify-center items-center bg-[#0D0D0D] relative">
       <Swiper
-        modules={[Autoplay]}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          stopOnLastSlide: true,
-        }}
+        onSwiper={(swiperInstance) => setSwiper(swiperInstance)}
+        onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
         spaceBetween={50}
         slidesPerView={1}
-        loop={false} 
-        className=" h-screen"
+        loop={false}
+        className="h-screen"
       >
         {onBoardSlides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className=" h-screen w-full flex justify-center items-center">{slide}</div>
+            <div className="h-screen w-full flex justify-center items-center relative">
+              {slide}
+              <div className="absolute bottom-1/2 transform translate-y-1/2 left-0 right-0 flex justify-between px-4 z-10">
+                {currentSlide > 0 && (
+                  <button
+                    onClick={handlePrev}
+                    className="text-white bg-blue-500 p-2 rounded-full shadow-lg"
+                  >
+                    <HiOutlineChevronLeft size={24} />
+                  </button>
+                )}
+
+                {currentSlide < 6 && (
+                  <button
+                    onClick={handleNext}
+                    className="text-white bg-blue-500 p-2 rounded-full shadow-lg ml-auto"
+                  >
+                    <HiOutlineChevronRight size={24} />
+                  </button>
+                )}
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
