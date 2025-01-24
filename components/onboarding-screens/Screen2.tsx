@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function OnboardScreen2() {
   return (
-    <div className="flex flex-col justify-center items-center space-y-5">
+    <div className="flex flex-col justify-center items-center space-y-5 ">
       <Image
         src="/weaverSpider.svg"
         alt="weaver-spider"

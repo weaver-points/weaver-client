@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/Header";
+
 
 const satoshi = localFont({
   src: "./fonts/Satoshi-Variable.woff2",
@@ -19,7 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshi.variable} antialiased`}>{children}</body>
+       <body className={`${satoshi.variable} antialiased`}>
+        <ThemeProvider attribute="class">
+          <Header />
+          {children}
+       </ThemeProvider>
+      </body>
     </html>
   );
 }

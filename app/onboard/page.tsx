@@ -23,7 +23,7 @@ export default function Onboard() {
   ];
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-[#0D0D0D] ">
+    <div className="min-h-screen flex justify-center items-center dark:bg-[#0D0D0D] dark:text-white ">
       <Swiper
         modules={[Autoplay]}
         autoplay={{

@@ -25,7 +25,7 @@ export default function TaskBox({
     : `${fullText.split(" ").slice(0, 6).join(" ")}...`;
 
   return (
-    <div className="bg-[#121212] border-2 border-[#1D1D1D] w-full h-auto rounded-t-[10px] rounded-b-none px-10 py-5">
+    <div className=" border-2 border-[#1D1D1D] w-full h-auto rounded-t-[10px] rounded-b-none px-10 py-5 dark:bg-[#121212] dark:text-white">
       <div className="flex space-x-5">
         <div
           className={`${backgroundColor} w-fit h-fit p-2 rounded-full flex items-center justify-center`}

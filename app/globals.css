@@ -31,3 +31,12 @@ body {
 .animate__animated.animate__zoomIn {
   --animate-duration: 0.3s;
 }
+.dark {
+  background-color: #1a202c; /* Dark background */
+  color: #e2e8f0; /* Light text */
+}
+
+.light {
+  background-color: #f7fafc; /* Light background */
+  color: #1a202c; /* Dark text */
+}
