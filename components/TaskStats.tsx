@@ -26,18 +26,19 @@ export default function TaskStats() {
         </p>
       </div>
       <div className="flex justify-between items-center pl-10 pt-10 ">
-        <h1 className="text-5xl font-medium">$20.45</h1>
+        <h1 className=" text-3xl lg:text-5xl font-medium">$20.45</h1>
         <div className="flex flex-col items-center">
           <div className="flex items-center">
             <Image
               src="/argent-logo.svg"
               alt="argent-logo"
-              height={28}
-              width={28}
+              height={100}
+              width={100}
+              className="w-[33px] object-contain lg:w-[50px] "
             />
-            <p className="font-bold text-xl">argent</p>
+            <p className="font-bold text-xs lg:text-xl">argent</p>
           </div>
-          <p className="border border-gray-600 font-thin py-0.5 px-7 rounded-lg mt-7">
+          <p className="border text-sm lg:text-base  border-gray-600 font-thin py-0.5 px-5 lg:px-7 rounded-lg mt-3 lg:mt-7">
             Balance
           </p>
         </div>
