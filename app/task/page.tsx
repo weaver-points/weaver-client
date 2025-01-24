@@ -11,7 +11,7 @@ import {
 
 export default function Tasks() {
   return (
-    <div className="font-satoshi w-full min-h-screen flex flex-col items-center justify-start bg-[#0D0D0D] text-white py-20">
+    <div className="font-satoshi w-full min-h-screen flex flex-col items-center justify-start bg-[#0D0D0D] text-white px-5 py-20">
       <div className="max-w-[652px] w-full flex flex-col items-center justify-start gap-10 ">
         <div className="flex flex-col items-center justify-center gap-7 max-w-[390.17px] max-h-[150px] ">
           <Image
@@ -24,11 +24,11 @@ export default function Tasks() {
             <Image
               src="/first-group-image.svg"
               alt="group-img-for-screen1"
-              height={128}
-              width={280}
-              className="w-[210px] h-[85px] "
+              height={100}
+              width={100}
+              className="lg:w-[210px] lg:h-[85px] w-[190px] sm:h-[85px] "
             />
-            <p className=" text-xl ">
+            <p className=" text-sm lg:text-xl ">
               <span className="font-light "> Lightweight </span> <br />
               on-chain identity <br />
               platform
