@@ -1,16 +1,21 @@
 "use client";
 
-import React from "react";
-import { HiSun } from "react-icons/hi"; // Import the icon
+import React, { useEffect } from "react";
+import { HiSun } from "react-icons/hi"; // Import the sun icon
 import { useTheme } from "next-themes"; // Import theme hook
 
 function Header() {
   const { theme, setTheme } = useTheme(); // Access theme state
 
+  // Ensure the default theme is set to dark
+  useEffect(() => {
+    if (!theme) setTheme("dark");
+  }, [theme, setTheme]);
+
   return (
     <div
-      className={`flex justify-end items-center p-4 text-white ${
-        theme === "dark" ? "bg-[#0D0D0D]" : "bg-white"
+      className={`flex justify-end items-center p-4 ${
+        theme === "dark" ? "bg-[#0D0D0D] text-white" : "bg-white text-black"
       }`}
     >
       <button

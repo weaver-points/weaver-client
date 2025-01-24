@@ -35,7 +35,7 @@ export default function StatsBox() {
         </div>
       </div>
 
-      <div className="metre w-full h-[120px] bg-[#1D1D1D] mt-8 flex flex-col  ">
+      <div className="metre w-full h-[120px] dark:bg-[#1D1D1D] mt-8 flex flex-col  ">
         <div className="metre-bar w-full relative bg-white h-[13.09px] overflow-hidden ">
           <span
             className="absolute top-0 left-0 bg-[#C4FF63] h-full"

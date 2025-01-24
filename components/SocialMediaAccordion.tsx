@@ -56,11 +56,11 @@ function SocialMediaAccordion({
               />
             </div>
             {isExpanded && (
-              <div className="details w-full px-[18px] border-l-[0.4px] border-l-[#636363] py-4 flex flex-col gap-y-4 text-xs md:text-sm leading-5 text-[#DDDDDD] transition-all duration-300">
+              <div className="details w-full px-[18px] border-l-[0.4px] border-l-[#636363] py-4 flex flex-col gap-y-4 text-xs md:text-sm leading-5 transition-all duration-300">
                 <div className="flex justify-between">
                   <h4>
                     Category:{" "}
-                    <span className="font-bold">{social.category}</span>
+                    <span className="font-bold ">{social.category}</span>
                   </h4>
                   <h4>
                     Points: <span className="font-bold">{social.points}</span>
