@@ -12,15 +12,7 @@ import OnboardScreen6 from "@/components/onboarding-screens/Screen6";
 import RegisterUser from "@/components/register-user/RegisterUser";
 
 export default function Onboard() {
-  const onBoardSlides = [
-    <OnboardScreen1 />,
-    <OnboardScreen2 />,
-    <OnboardScreen3 />,
-    <OnboardScreen4 />,
-    <OnboardScreen5 />,
-    <OnboardScreen6 />,
-    <RegisterUser />,
-  ];
+  const onBoardSlides = [<RegisterUser />];
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-[#0D0D0D] ">
@@ -33,15 +25,26 @@ export default function Onboard() {
         }}
         spaceBetween={50}
         slidesPerView={1}
-        loop={false} 
+        loop={false}
         className=" h-screen"
       >
         {onBoardSlides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className=" h-screen w-full flex justify-center items-center">{slide}</div>
+            <div className=" h-screen w-full flex justify-center items-center">
+              {slide}
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
   );
+}
+
+{
+  /* <OnboardScreen2 />,
+    <OnboardScreen3 />,
+    <OnboardScreen4 />,
+    <OnboardScreen5 />,
+    <OnboardScreen6 />,
+    <RegisterUser />, */
 }

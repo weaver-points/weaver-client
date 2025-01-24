@@ -21,7 +21,9 @@ export default function ConnectWalletModal({
     "I understand DeFi is a new phenomenon, and understand and undertake any technological and market risks associated with it.",
   ];
 
-  const collapsedText = fullText.slice(0, 4);
+  const sliceNumber = window.innerWidth < 768 ? 3 : 4;
+
+  const collapsedText = fullText.slice(0, sliceNumber);
 
   return createPortal(
     <div
