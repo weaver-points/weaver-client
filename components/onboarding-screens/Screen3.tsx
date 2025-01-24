@@ -19,7 +19,7 @@ export default function OnboardScreen3({}) {
         alt="group-img-for-screen1"
         height={100}
         width={100}
-        className="w-[280px] h-[500] object-contain  self-end "
+        className="w-[280px] md:h-[500] object-contain  self-end h-fit"
       />
 
       <div className="min-w-[300px] md:min-w-[200px] md:max-w-[335px] w-[20vw] md:w-[17.43vw]  min-h-[230px]  flex flex-col items-center justify-between text-center text-white">
