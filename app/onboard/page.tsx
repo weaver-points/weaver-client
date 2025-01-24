@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,15 +13,30 @@ import OnboardScreen6 from "@/components/onboarding-screens/Screen6";
 import RegisterUser from "@/components/register-user/RegisterUser";
 
 export default function Onboard() {
+  const [showSplash, setShowSplash] = useState(0);
+
+  useEffect(()=>{
+    if(showSplash < 2){
+      const timer = setTimeout(()=> setShowSplash(prev => prev + 1 ), 1000);
+      return ()=> clearTimeout(timer);
+    }
+  }, [showSplash]);
+
   const onBoardSlides = [
-    <OnboardScreen1 />,
-    <OnboardScreen2 />,
     <OnboardScreen3 />,
     <OnboardScreen4 />,
     <OnboardScreen5 />,
     <OnboardScreen6 />,
     <RegisterUser />,
   ];
+
+  if(showSplash === 0){ 
+    return  <div className="h-screen w-full flex justify-center items-center"><OnboardScreen1 /></div>
+  }
+
+  if(showSplash === 1){
+    return <div className="h-screen w-full flex justify-center items-center"> <OnboardScreen2 /></div>
+  }
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-[#0D0D0D] ">
