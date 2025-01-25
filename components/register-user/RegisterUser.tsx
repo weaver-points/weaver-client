@@ -27,7 +27,7 @@ export default function RegisterUser() {
           </span>
         </p>
         <button
-          className="w-full bg-[#EDFFD0] py-3 text-center text-base font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1]  dark:text-[#0D0D0D]"
+          className="w-full bg-[#EDFFD0] py-3 text-center text-base font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1] text-[#0D0D0D]"
           onClick={() => setIsModalOpen(true)}
         >
           Mint

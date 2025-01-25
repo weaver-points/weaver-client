@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/ThemeContext";
+import ThemeToggle from "@/components/ThemeToggle";
 
 
 const satoshi = localFont({
@@ -23,10 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
        <body className={`${satoshi.variable} antialiased`}>
-        <ThemeProvider attribute="class">
-          <Header />
-          {children}
-       </ThemeProvider>
+       <ThemeProvider>
+        <ThemeToggle />
+        {children}</ThemeProvider>
       </body>
     </html>
   );

@@ -27,7 +27,7 @@ export default function OnboardScreen5() {
           <span className="font-light leading-8 ">Increase</span>
           <span className="font-bold  leading-8 ">Onchain Reputation</span>
         </p>
-        <button className="w-full bg-[#EDFFD0] py-3 text-center text-base  font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1] ml-5 dark:text-[#0D0D0D]">
+        <button className="w-full bg-[#EDFFD0] py-3 text-center text-base  font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1] ml-5 text-[#0D0D0D]">
           Let’s get it🚀
         </button>
       </div>

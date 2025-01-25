@@ -53,7 +53,7 @@ export default function Tasks() {
         />
         <TaskBox
           backgroundColor="bg-black"
-          icon={<FiGithub size={30} />}
+          icon={<FiGithub size={30} className="text-white" />}
           taskName="Github"
         />
         <TaskBox

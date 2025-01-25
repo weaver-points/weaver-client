@@ -25,11 +25,11 @@ export default function ConnectWalletModal({
 
   return createPortal(
     <div
-      className="bg-transparent fixed inset-0 flex justify-center items-center z-[100] font-satoshi"
+      className="bg-white fixed inset-0 flex justify-center items-center z-[100] font-satoshi dark:bg-[#0D0D0D] dark:text-white"
       onClick={() => onCloseModal(false)}
     >
       <div
-        className="border border-[#414141]  rounded-[20px] px-5 py-5 space-y-3 w-[80vw] max-w-[493px] 2xl:w-2/5 dark:bg-[#0D0D0D] dark:text-white"
+        className="border border-[#414141]  rounded-[20px] px-5 py-5 space-y-3 w-[80vw] max-w-[493px] 2xl:w-2/5 "
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center">

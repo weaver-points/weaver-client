@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import { useTheme } from "@/components/ThemeContext";
+
 
 export default function TaskStats() {
-
+  const { theme } = useTheme();
   const point = 50
   const totalPoint = 100
 
@@ -13,7 +15,10 @@ export default function TaskStats() {
 
 
   return (
-    <div className="border-2 border-[#1D1D1D] w-full space-y-5 h-auto my-4 rounded-t-[10px] dark:bg-[#121212] dark:text-white rounded-b-none px-10 py-5">
+    <div className= {` border-2 border-[#1D1D1D] w-full space-y-5 h-auto my-4 rounded-t-[10px]  rounded-b-none px-10 py-5
+          ${ theme === "dark" ? "bg-[#121212] text-white" : " bg-white text-black"
+        }`} 
+    >
       <div>
         <div className="flex justify-between font-light">
           <p>Total Points</p>
