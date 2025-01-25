@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
+
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useState, useRef } from "react";
+import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
 import "swiper/css";
-import { HiOutlineChevronRight, HiOutlineChevronLeft } from "react-icons/hi";
 import OnboardScreen1 from "@/components/onboarding-screens/Screen1";
 import OnboardScreen2 from "@/components/onboarding-screens/Screen2";
 import OnboardScreen3 from "@/components/onboarding-screens/Screen3";
@@ -12,8 +14,10 @@ import OnboardScreen6 from "@/components/onboarding-screens/Screen6";
 import RegisterUser from "@/components/register-user/RegisterUser";
 
 export default function Onboard() {
-  const [swiper, setSwiper] = useState(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoplay, setIsAutoplay] = useState(true); // Control autoplay
+  const [showButtons, setShowButtons] = useState(false); // Control button visibility
+  const [isLastSlide, setIsLastSlide] = useState(false); // Track if it's the last slide
+  const swiperRef = useRef(null); // Reference to the Swiper instance
 
   const onBoardSlides = [
     <OnboardScreen1 />,
@@ -25,55 +29,69 @@ export default function Onboard() {
     <RegisterUser />,
   ];
 
-  const handleNext = () => {
-    if (swiper) {
-      swiper.slideNext();
-    }
-  };
-
-  const handlePrev = () => {
-    if (swiper) {
-      swiper.slidePrev();
-    }
-  };
-
   return (
     <div className="min-h-screen flex justify-center items-center bg-[#0D0D0D] relative">
       <Swiper
-        onSwiper={(swiperInstance) => setSwiper(swiperInstance)}
-        onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
+        modules={[Autoplay]}
+        autoplay={
+          isAutoplay ? { delay: 3000, disableOnInteraction: false } : false
+        }
+        onSlideChange={(swiper) => {
+          const currentIndex = swiper.activeIndex;
+          const lastSlideIndex = onBoardSlides.length - 1;
+
+          // Enable autoplay only for the first two slides
+          if (currentIndex <= 1) {
+            setIsAutoplay(true);
+            setShowButtons(false); // Hide buttons for the first two slides
+          } else {
+            setIsAutoplay(false);
+            setShowButtons(true); // Show buttons for remaining slides
+            if (swiperRef.current) swiperRef.current.autoplay.stop(); // Stop autoplay
+          }
+
+          // Check if it's the last slide
+          setIsLastSlide(currentIndex === lastSlideIndex);
+        }}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper; // Save swiper instance
+        }}
         spaceBetween={50}
         slidesPerView={1}
         loop={false}
-        className="h-screen"
+        className="h-screen w-full"
       >
         {onBoardSlides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="h-screen w-full flex justify-center items-center relative">
+            <div className="h-screen w-full flex justify-center items-center">
               {slide}
-              <div className="absolute bottom-1/2 transform translate-y-1/2 left-0 right-0 flex justify-between px-4 z-10">
-                {currentSlide > 1 && (
-                  <button
-                    onClick={handlePrev}
-                    className="text-white bg-blue-500 p-2 rounded-full shadow-lg"
-                  >
-                    <HiOutlineChevronLeft size={24} />
-                  </button>
-                )}
-
-                {currentSlide > 1 && currentSlide < 6 && (
-                  <button
-                    onClick={handleNext}
-                    className="text-white bg-blue-500 p-2 rounded-full shadow-lg ml-auto"
-                  >
-                    <HiOutlineChevronRight size={24} />
-                  </button>
-                )}
-              </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Conditionally render navigation buttons */}
+      {showButtons && (
+        <>
+          {/* Left navigation button */}
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
+          >
+            <HiOutlineChevronLeft size={30} />
+          </button>
+
+          {/* Right navigation button */}
+          {!isLastSlide && (
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
+            >
+              <HiOutlineChevronRight size={30} />
+            </button>
+          )}
+        </>
+      )}
     </div>
   );
 }
