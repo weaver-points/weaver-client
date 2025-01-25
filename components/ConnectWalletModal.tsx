@@ -25,25 +25,25 @@ export default function ConnectWalletModal({
 
   return createPortal(
     <div
-      className="bg-transparent fixed inset-0 flex justify-center items-center z-[100] font-satoshi"
+      className="bg-white fixed inset-0 flex justify-center items-center z-[100] font-satoshi dark:bg-[#0D0D0D] dark:text-white"
       onClick={() => onCloseModal(false)}
     >
       <div
-        className="border border-[#414141] bg-[#181717] rounded-[20px] px-5 py-5 space-y-3 w-[80vw] max-w-[493px] 2xl:w-2/5"
+        className="border border-[#414141]  rounded-[20px] px-5 py-5 space-y-3 w-[80vw] max-w-[493px] 2xl:w-2/5 "
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center">
-          <h2 className="font-medium text-white text-xl">
+          <h2 className="font-medium  text-xl">
             Wallet Verification
           </h2>
           <IoMdClose
             size={30}
-            className="cursor-pointer text-white"
+            className="cursor-pointer "
             onClick={() => onCloseModal(false)}
           />
         </div>
         <div className="space-y-4">
-          <p className="font-thin text-white opacity-[90%]">
+          <p className="font-thin  opacity-[90%]">
             By verifying your wallet, you agree to our{" "}
             <span className="underline">Terms of Service</span> and
             <span className="underline"> Privacy Policy.</span>
@@ -54,7 +54,7 @@ export default function ConnectWalletModal({
                 (paragraph, index) => (
                   <p
                     key={index}
-                    className="font-thin text-sm text-gray-300 mt-2"
+                    className="font-thin text-sm  mt-2"
                   >
                     {paragraph}
                   </p>

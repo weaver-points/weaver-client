@@ -6,8 +6,9 @@ import Image from "next/image";
 
 export default function Dashboard() {
   return (
-    <div className="font-satoshi w-full min-h-screen flex flex-col items-center justify-start bg-[#0D0D0D] text-white py-20">
-      <div className="max-w-[652px] w-full flex flex-col items-center justify-start gap-10 ">
+    <>
+    <div className="font-satoshi w-full min-h-screen flex flex-col items-center justify-start bg-background border-[#636363]   py-20">
+      <div className="max-w-[652px] w-full flex flex-col items-center justify-start gap-10">
         <div className="flex flex-col items-center justify-center gap-7 max-w-[390.17px] max-h-[150px] ">
           <Image
 
@@ -36,6 +37,7 @@ export default function Dashboard() {
         <NftContainer/>
       </div>
     </div>
+    </>
   );
 }
 

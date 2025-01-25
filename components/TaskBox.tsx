@@ -2,6 +2,8 @@
 
 import { FaTelegramPlane, FaChevronDown } from "@/utils/icons";
 import React, { useState } from "react";
+import { useTheme } from "@/components/ThemeContext";
+
 
 interface TaskBoxProps {
   taskName: string;
@@ -16,6 +18,7 @@ export default function TaskBox({
 }: TaskBoxProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isComplete, setIsComplete] = useState(true);
+  const { theme } = useTheme();
 
   const fullText =
     "StarkPoint will measure its success based on the growth in user interactions over time";
@@ -25,7 +28,9 @@ export default function TaskBox({
     : `${fullText.split(" ").slice(0, 6).join(" ")}...`;
 
   return (
-    <div className="bg-[#121212] border-2 border-[#1D1D1D] w-full h-auto rounded-t-[10px] rounded-b-none px-10 py-5">
+    <div className= {`border-2 border-[#1D1D1D] w-full h-auto rounded-t-[10px] rounded-b-none px-10 py-5 
+      ${ theme === "dark" ? "bg-[#121212] text-white" : "bg-white text-black"
+    }`} >
       <div className="flex space-x-5">
         <div
           className={`${backgroundColor} w-fit h-fit p-2 rounded-full flex items-center justify-center`}
