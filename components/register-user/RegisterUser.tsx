@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import ConnectWalletModal from "@/components/ConnectWalletModal";
+import RegisterUserModal from "@/components/register-user/RegisterUserModal";
 
 export default function RegisterUser() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,7 +32,7 @@ export default function RegisterUser() {
         >
           Mint
         </button>
-        {isModalOpen && <ConnectWalletModal onCloseModal={setIsModalOpen} />}
+        {isModalOpen && <RegisterUserModal onCloseModal={setIsModalOpen} />}
       </div>
     </div>
   );
