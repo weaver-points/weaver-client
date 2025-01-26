@@ -1,44 +1,47 @@
 import Image from "next/image";
 import React from "react";
+import { useTheme } from "@/components/ThemeContext";
 
 export default function TaskStats() {
-
-  const point = 50
-  const totalPoint = 100
-
-
-
-
-
-
+  const { theme } = useTheme();
+  const point = 50;
+  const totalPoint = 100;
 
   return (
-    <div className="bg-[#121212] border-2 border-[#1D1D1D] w-full space-y-5 h-auto my-4 rounded-t-[10px] rounded-b-none px-7 lg:px-10 py-5">
+    <div
+      className={` border-2 border-[#1D1D1D] w-full space-y-5 h-auto my-4 rounded-t-[10px]  rounded-b-none px-10 py-5
+          ${
+            theme === "dark"
+              ? "bg-[#121212] text-white"
+              : " bg-white text-black"
+          }`}
+    >
       <div>
-        <div className="flex justify-between font-light text-xs lg:text-base ">
+        <div className="flex justify-between font-light">
           <p>Total Points</p>
-          <p>{point}/{totalPoint}</p>
+          <p>
+            {point}/{totalPoint}
+          </p>
         </div>
-        <progress value={point} max={100} className="taskProgressBar w-full h-2 lg:h-3" />
+        <progress value={point} max={100} className="taskProgressBar w-full" />
         <p className="text-sm font-medium text-secondary">
           Build and verify digital reputation without having to sacrifice user
           privacy.
         </p>
       </div>
       <div className="flex justify-between items-center pl-10 pt-10 ">
-        <h1 className=" text-3xl lg:text-5xl font-medium">$20.45</h1>
+        <h1 className="text-5xl font-medium">$20.45</h1>
         <div className="flex flex-col items-center">
           <div className="flex items-center">
             <Image
               src="/argent-logo.svg"
               alt="argent-logo"
-              height={100}
-              width={100}
-              className="w-[33px] object-contain lg:w-[50px] "
+              height={28}
+              width={28}
             />
-            <p className="font-bold text-xs lg:text-xl">argent</p>
+            <p className="font-bold text-xl">argent</p>
           </div>
-          <p className="border text-sm lg:text-base  border-gray-600 font-thin py-0.5 px-5 lg:px-7 rounded-lg mt-3 lg:mt-7">
+          <p className="border border-gray-600 font-thin py-0.5 px-7 rounded-lg mt-7">
             Balance
           </p>
         </div>

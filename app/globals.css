@@ -3,8 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-color: #0d0d0d;
+  --text-color: #ffffff;
+}
+
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-weight: 400;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,11 +26,6 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-weight: 400;
-}
 .taskProgressBar::-webkit-progress-bar {
   background-color: #f0f0f0;
   border-radius: 4px;
