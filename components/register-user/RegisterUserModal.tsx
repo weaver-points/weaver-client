@@ -63,9 +63,7 @@ export default function RegisterUserModal({
           />
           <button
             className={`w-full py-3 text-center text-base font-[500] rounded-[8px] transform transition duration-300 ${
-              isMinted
-                ? "bg-[#EDFFD0] text-[#000000]"
-                : "bg-gray-500 text-gray-300"
+              isMinted ? "bg-[#EDFFD0] text-[#000000]" : "bg-gray-500 text-gray-300"
             }`}
             onClick={handleMint}
             disabled={!nickname || isMinted}
@@ -77,4 +75,5 @@ export default function RegisterUserModal({
     </div>,
     document.body
   );
-}
+} 
+

@@ -6,6 +6,7 @@ import { FaChevronDown } from "@/utils/icons";
 import "animate.css";
 import { useTheme } from "@/components/ThemeContext";
 
+
 type NftItem = {
   name: string;
   point: number;
@@ -50,6 +51,7 @@ export default function TanglerData() {
   const [isExpanded, setIsExpanded] = useState(false);
   const { theme } = useTheme();
 
+  
   const showContent = () => {
     setContentHeight((prevContentHeight) =>
       prevContentHeight === "100px" ? "auto" : "100px"
@@ -59,13 +61,14 @@ export default function TanglerData() {
 
   return (
     <div
-      className={`animate__animated animate__zoomIn overflow-hidden border-2 border-[#343434] w-full my-4 rounded-t-[10px] rounded-b-none px-5 py-5 flex flex-col gap-7 items-center justify-start mt-6 transition duration-300 ${
-        theme === "dark" ? "bg-[#121212] text-white" : "bg-white text-black"
-      }`}
-      style={{
-        height: contentHeight,
-      }}
-    >
+    className={`animate__animated animate__zoomIn overflow-hidden border-2 border-[#343434] w-full my-4 rounded-t-[10px] rounded-b-none px-5 py-5 flex flex-col gap-7 items-center justify-start mt-6 transition duration-300 ${
+      theme === "dark" ? "bg-[#121212] text-white" : "bg-white text-black"
+    }`}
+    style={{
+      height: contentHeight,
+    }}
+  >
+
       <header
         onClick={showContent}
         className="title w-full flex flex-row items-center justify-between cursor-pointer"
@@ -93,12 +96,9 @@ export default function TanglerData() {
       {Nft.map((item, index) => (
         <div
           key={index}
-          className={` details w-full border rounded-lg rounded-b border-[#343434]
-            ${
-              theme === "dark"
-                ? "bg-[#181818] text-white "
-                : "bg-white text-black"
-            }`}
+          className= {` details w-full border rounded-lg rounded-b border-[#343434]
+            ${ theme === "dark" ? "bg-[#181818] text-white " : "bg-white text-black"
+          }`}
         >
           <div className="w-full h-[240px] flex">
             <div className="border-r border-[#808080] w-32 h-full flex items-start justify-center py-2">
@@ -111,15 +111,13 @@ export default function TanglerData() {
               />
             </div>
             <div className="h-full w-full flex flex-col">
-              <div
-                className={` h-1/2 w-full  border-b-[0.5px] px-4 py-5 border-[#636363]
-                ${
-                  theme === "dark"
-                    ? "bg-[#212121] text-white"
-                    : "bg-white text-black"
-                }`}
-              >
-                <h2 className=" font-bold text-base">{item.name}</h2>
+
+              <div className= {` h-1/2 w-full  border-b-[0.5px] px-4 py-5 border-[#636363]
+                ${ theme === "dark" ? "bg-[#212121] text-white" : "bg-white text-black"
+                   }`}>
+                <h2 className=" font-bold text-base">
+                  {item.name}
+                </h2>
                 <p className=" text-xs font-normal max-w-[380px] dark:text-[#808080]">
                   {item.description}
                 </p>
@@ -160,12 +158,9 @@ export default function TanglerData() {
             </div>
           </div>
 
-          <div
-            className={` w-full  border-t border-b  text-center h-14 flex items-center justify-center dark:bg-[#212121] border-[#636363]
-          ${
-            theme === "dark" ? "bg-[#212121] text-white" : "bg-white text-black"
-          }`}
-          >
+          <div className=  {` w-full  border-t border-b  text-center h-14 flex items-center justify-center dark:bg-[#212121] border-[#636363]
+          ${ theme === "dark" ? "bg-[#212121] text-white" : "bg-white text-black"
+        }`}>
             <p className="text-gray-600 font-normal text-sm dark:text-[#808080]">
               Click to check transaction history
             </p>

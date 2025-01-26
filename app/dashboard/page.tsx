@@ -7,9 +7,16 @@ import Image from "next/image";
 export default function Dashboard() {
   return (
     <>
-      <div className="font-satoshi w-full min-h-screen flex flex-col items-center justify-start bg-background border-[#636363]   py-20">
-        <div className="max-w-[652px] w-full flex flex-col items-center justify-start gap-10">
-          <div className="flex flex-col items-center justify-center gap-7 max-w-[390.17px] max-h-[150px] ">
+    <div className="font-satoshi w-full min-h-screen flex flex-col items-center justify-start bg-background border-[#636363]   py-20">
+      <div className="max-w-[652px] w-full flex flex-col items-center justify-start gap-10">
+        <div className="flex flex-col items-center justify-center gap-7 max-w-[390.17px] max-h-[150px] ">
+          <Image
+            src="/weaver-logo.svg"
+            alt="weaver-logo"
+            height={100}
+            width={100}
+          />
+          <div className="flex flex-row items-center justify-between w-full gap-3">
             <Image
               src="/weaver-logo.svg"
               alt="weaver-logo"
@@ -36,6 +43,7 @@ export default function Dashboard() {
           <NftContainer />
         </div>
       </div>
+    </div>
     </>
   );
 }

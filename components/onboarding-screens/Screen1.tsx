@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function OnboardScreen1() {
   return (
-    <div className="flex flex-col justify-center items-center space-y-5">
+    <div className="flex flex-col justify-center items-center space-y-5 dark:bg-[#0D0D0D] dark:text-white">
       <p className="text-base">
-        <span className="font-thin  text-gray-300 font-satoshi">
+        <span className="font-thin font-satoshi">
           Lightweight
         </span>{" "}
-        <span className="font-bold text-white ">
+        <span className="font-bold  ">
           {" "}
           on-chain identity platform
         </span>
