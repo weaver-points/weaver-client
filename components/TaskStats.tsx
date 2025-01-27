@@ -22,7 +22,9 @@ export default function TaskStats() {
       <div>
         <div className="flex justify-between font-light">
           <p>Total Points</p>
-          <p>{point}/{totalPoint}</p>
+          <p>
+            {point}/{totalPoint}
+          </p>
         </div>
         <progress value={point} max={100} className="taskProgressBar w-full" />
         <p className="text-sm font-medium text-secondary">

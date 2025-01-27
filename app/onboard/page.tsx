@@ -30,7 +30,6 @@ export default function Onboard() {
   ];
 
   return (
-
     <div className="min-h-screen flex justify-center items-center">
       <Swiper
         modules={[Autoplay]}

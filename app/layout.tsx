@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeContext";
 import ThemeToggle from "@/components/ThemeToggle";
 
-
 const satoshi = localFont({
   src: "./fonts/Satoshi-Variable.woff2",
   variable: "--font-satoshi",
@@ -22,10 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <body className={`${satoshi.variable} antialiased`}>
-       <ThemeProvider>
-        <ThemeToggle />
-        {children}</ThemeProvider>
+      <body className={`${satoshi.variable} antialiased`}>
+        <ThemeProvider>
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

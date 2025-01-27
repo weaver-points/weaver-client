@@ -47,30 +47,30 @@ export default function TaskBox({
             className="flex justify-between items-center w-full pl-3 cursor-pointer"
             onClick={() => setIsExpanded(!isExpanded)}
           >
-            <h2>Connect {taskName}</h2>
+            <h2 className="text-base" >Connect {taskName}</h2>
             <FaChevronDown
               className={` transform transition-all duration-300  ${
                 isExpanded ? "rotate-[180deg]" : "rotate-[0] "
               } `}
             />
           </div>
-          <p className="font-thin text-secondary pl-3 w-full">
+          <p className="font-thin text-secondary pl-3 w-full text-sm lg:text-base" >
             {displayedText}
           </p>
 
           {isExpanded && (
             <div className="w-full mt-3 space-y-2 border-t border-gray-700 pt-2">
               <div className="flex justify-between items-center pl-3">
-                <p className="space-x-2">
+                <p className="space-x-2 text-sm lg:text-base">
                   <span className="font-thin text-secondary">Category:</span>
                   <span>Socials</span>
                 </p>
-                <p className="space-x-2">
+                <p className="space-x-2 text-sm lg:text-base">
                   <span className="font-thin text-secondary">Points:</span>
                   <span>40</span>
                 </p>
               </div>
-              <p className="space-x-2 pl-3">
+              <p className="space-x-2 pl-3 text-sm lg:text-base">
                 <span className="font-thin text-secondary">Status:</span>
                 <span>{isComplete? " Done" : "pending"} </span>
               </p>
@@ -80,7 +80,7 @@ export default function TaskBox({
       </div>
       {isExpanded && (
         <button
-          className={`py-5 w-full bg-[#EDFFD0] text-[#000000] text-base font-medium rounded-lg transform transition duration-300 hover:scale-[1.02] mt-5`}
+          className={`text-sm lg:text-base py-3 lg:py-5 w-full bg-[#EDFFD0] text-[#000000]  font-medium rounded-lg transform transition duration-300 hover:scale-[1.02] mt-5`}
         >
           Connect {taskName}
         </button>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background-color: #0D0D0D;
+  --background-color: #0d0d0d;
   --text-color: #ffffff;
 }
 
@@ -25,8 +25,6 @@ body {
     --foreground: #ededed;
   }
 }
-
-
 
 .taskProgressBar::-webkit-progress-bar {
   background-color: #f0f0f0;

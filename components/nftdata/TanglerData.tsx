@@ -51,7 +51,7 @@ export default function TanglerData() {
   const [isExpanded, setIsExpanded] = useState(false);
   const { theme } = useTheme();
 
-
+  
   const showContent = () => {
     setContentHeight((prevContentHeight) =>
       prevContentHeight === "100px" ? "auto" : "100px"
@@ -68,6 +68,7 @@ export default function TanglerData() {
       height: contentHeight,
     }}
   >
+
       <header
         onClick={showContent}
         className="title w-full flex flex-row items-center justify-between cursor-pointer"
@@ -110,6 +111,7 @@ export default function TanglerData() {
               />
             </div>
             <div className="h-full w-full flex flex-col">
+
               <div className= {` h-1/2 w-full  border-b-[0.5px] px-4 py-5 border-[#636363]
                 ${ theme === "dark" ? "bg-[#212121] text-white" : "bg-white text-black"
                    }`}>

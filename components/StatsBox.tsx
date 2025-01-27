@@ -40,7 +40,7 @@ export default function StatsBox() {
           </p>
         </div>
       </div>
-    
+
       <div
         className={`metre w-full h-[120px] mt-8 flex flex-col 
           ${ theme === "dark" ? "bg-[#1D1D1D]" : "bg-gray-200"
