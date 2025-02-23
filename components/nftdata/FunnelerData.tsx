@@ -1,7 +1,10 @@
 import { useState } from "react";
 import SocialMediaAccordion from "../SocialMediaAccordion";
+import { useTheme } from "@/components/ThemeContext";
 
 function FunnelerData() {
+  const { theme } = useTheme();
+
   const socials = [
     {
       name: "Telegram",
@@ -42,7 +45,11 @@ function FunnelerData() {
   };
 
   return (
-    <div className="flex flex-col gap-y-6 pt-6">
+    <div
+      className={`flex flex-col gap-y-6 pt-6 transition duration-300 ${
+        theme === "dark" ? "bg-[#121212] text-white" : "bg-white text-black"
+      }`}
+    >
       {socials.map((social) => (
         <SocialMediaAccordion
           key={social.name}
