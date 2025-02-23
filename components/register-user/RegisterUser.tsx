@@ -30,19 +30,17 @@ export default function RegisterUser() {
 
       <div className="min-w-[200px] max-w-[335px] w-[17.43vw] min-h-[230px] flex flex-col items-center justify-between text-center">
         <p className="flex flex-col items-center justify-center text-xl lg:text-[28px]">
-          <span className="font-light leading-8">Mint NFT</span>
-          <span className="font-bold leading-8">
-            to access
-            <br />
-            Weaver
-          </span>
+          <span className="font-light leading-8">NFT mint processing</span>
+          {/* <span className="font-bold leading-8">
+            processing
+          </span> */}
         </p>
 
         <div className="w-full flex flex-col items-center justify-between gap-4">
           <div className="w-full flex flex-col items-center justify-center gap-2">
             <div className="w-full flex items-center justify-between">
-              <span>Identity Verification</span>
-              <span>✅</span>
+              <span>Verify your identity document</span><br />
+              <span>Upload your official documents</span>
             </div>
             <div className="w-full flex items-center justify-between">
               <span>NFT Minting</span>
@@ -62,7 +60,7 @@ export default function RegisterUser() {
               onChange={(e) => setIsTermsAccepted(e.target.checked)}
             />
             <label htmlFor="terms" className="text-sm">
-              I accept the <a href="#" className="text-blue-500">terms of service</a> and <a href="#" className="text-blue-500">privacy policy</a>
+              Please read our <a href="#" className="text-blue-500">privacy policy</a> and <a href="#" className="text-blue-500">terms of service</a>
             </label>
           </div>
 
