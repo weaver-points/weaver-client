@@ -34,7 +34,7 @@ export default function Onboard() {
       <Swiper
         modules={[Autoplay]}
         autoplay={
-          isAutoplay ? { delay: 3000, disableOnInteraction: false } : false
+          isAutoplay ? { delay: 3000, disableOnInteraction: true } : false
         }
         onSlideChange={(swiper) => {
           const currentIndex = swiper.activeIndex;
@@ -71,25 +71,25 @@ export default function Onboard() {
       </Swiper>
 
       {/* Conditionally render navigation buttons */}
-      {showButtons && (
+      {showButtons && !isLastSlide && (
         <>
           {/* Left navigation button */}
           <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
+            aria-label="Previous slide"
           >
             <HiOutlineChevronLeft size={30} />
           </button>
 
           {/* Right navigation button */}
-          {!isLastSlide && (
-            <button
-              onClick={() => swiperRef.current?.slideNext()}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
-            >
-              <HiOutlineChevronRight size={30} />
-            </button>
-          )}
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
+            aria-label="Next slide"
+          >
+            <HiOutlineChevronRight size={30} />
+          </button>
         </>
       )}
     </div>
