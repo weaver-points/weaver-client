@@ -11,6 +11,7 @@ import OnboardScreen3 from "@/components/onboarding-screens/Screen3";
 import OnboardScreen4 from "@/components/onboarding-screens/Screen4";
 import OnboardScreen5 from "@/components/onboarding-screens/Screen5";
 import OnboardScreen6 from "@/components/onboarding-screens/Screen6";
+import OnboardScreen7 from "@/components/onboarding-screens/Screen7";
 import RegisterUser from "@/components/register-user/RegisterUser";
 
 export default function Onboard() {
@@ -26,6 +27,7 @@ export default function Onboard() {
     <OnboardScreen4 />,
     <OnboardScreen5 />,
     <OnboardScreen6 />,
+    <OnboardScreen7 />,
     <RegisterUser />,
   ];
 
