@@ -59,9 +59,34 @@ export default function RegisterUser() {
               checked={isTermsAccepted}
               onChange={(e) => setIsTermsAccepted(e.target.checked)}
             />
-            <label htmlFor="terms" className="text-sm">
-              Please read our <a href="#" className="text-blue-500">privacy policy</a> and <a href="#" className="text-blue-500">terms of service</a>
-            </label>
+<label htmlFor="terms" className="text-sm">
+  <div className="flex items-start">
+    <div className="flex items-center h-5">
+      <input
+        id="terms"
+        name="terms"
+        type="checkbox"
+        className="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
+        required
+      />
+    </div>
+    <div className="ml-3">
+      <span>
+        Please read our{" "}
+        <a href="#" className="text-blue-500">
+          privacy policy
+        </a>{" "}
+        and{" "}
+        <a href="#" className="text-blue-500">
+          terms of service
+        </a>
+      </span>
+      <p className="text-sm text-gray-500">
+        Note: You need to be 18 and above. The verification fee is not-refundable, if your ID is declined.
+      </p>
+    </div>
+  </div>
+</label>
           </div>
 
           <button
@@ -69,12 +94,8 @@ export default function RegisterUser() {
             onClick={handleMint}
             disabled={!isTermsAccepted || isProcessing}
           >
-            {isProcessing ? "Processing..." : "Mint"}
+            {isProcessing ? "Processing..." : "Pay"}
           </button>
-
-          <p className="text-sm text-gray-500">
-            By proceeding, you confirm that you are at least 18 years old and agree that this transaction is non-refundable.
-          </p>
         </div>
 
         {isModalOpen && <RegisterUserModal onCloseModal={() => setIsModalOpen(false)} />}
