@@ -24,7 +24,7 @@ export default function OnboardScreen6() {
         alt="group-img-for-screen1"
         height={100}
         width={100}
-        className=" lg:w-[380] w-[250] h-[300] lg lg:h-[500]   max-sm:my-3 object-contain  lg:self-end "
+        className="w-[350px] h-[700px] object-contain  self-end"
       />
 
       <div className="w-full min-w-[200px] max-w-[335px] md:w-[17.43vw] min-h-[280px] max-md:min-h-[280px] flex flex-col items-center justify-between text-center">
