@@ -3,17 +3,9 @@ import { useSwiper } from "swiper/react";
 
 export default function OnboardScreen3({}) {
   const swiper = useSwiper();
-  const skipToLast = () => {
-    swiper?.slideTo(6);
-  };
+  
   return (
     <div className="font-satoshi px-y min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-row items-center justify-between px-16  border border-[#414141] dark:bg-[#0D0D0D] dark:text-white rounded-[20px] relative">
-      <small
-        className="absolute top-[10%] right-[10%]  text-base font-[500] transition duration-300 hover:text-[#EDFFD0] cursor-pointer  "
-        onClick={skipToLast}
-      >
-        Skip
-      </small>
       <Image
         src="/Frame13.svg"
         alt="group-img-for-screen1"

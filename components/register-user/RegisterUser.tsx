@@ -14,7 +14,7 @@ export default function RegisterUser() {
         alt="group-img-for-screen1"
         height={100}
         width={100}
-        className="w-[350px] h-[500] object-contain  self-end "
+        className="w-[400px] h-[600px] object-contain  self-end -ml-6"
       />
 
       <div className="min-w-[200px] max-w-[335px] w-[17.43vw]  min-h-[230px]  flex flex-col items-center justify-between text-center">

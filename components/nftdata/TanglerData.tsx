@@ -76,14 +76,14 @@ export default function TanglerData() {
         <div className="flex flex-row items-center gap-5">
           <div className="w-[57px] h-[57px] flex justify-center items-center rounded-full border-[#636363] relative">
             <Image
-              src="/TanglerNFT.svg"
+              src="/spiderg.svg"
               alt="NFT"
               width={100}
               height={100}
-              className="w-[45px] h-[45px]"
+              className="w-[60px] h-[60px]"
             />
           </div>
-          <h1 className=" dark:text-white">Tangler</h1>
+          <h1 className="dark:text-white font-bold text-base">Tangler</h1>
         </div>
 
         <FaChevronDown
@@ -115,10 +115,10 @@ export default function TanglerData() {
               <div className= {` h-1/2 w-full  border-b-[0.5px] px-4 py-5 border-[#636363]
                 ${ theme === "dark" ? "bg-[#212121] text-white" : "bg-white text-black"
                    }`}>
-                <h2 className=" font-bold text-base">
+                <h2 className="font-bold text-base">
                   {item.name}
                 </h2>
-                <p className=" text-xs font-normal max-w-[380px] dark:text-[#808080]">
+                <p className=" text-xs font-normal max-w-[380px] text-[#808080]">
                   {item.description}
                 </p>
               </div>
@@ -144,9 +144,9 @@ export default function TanglerData() {
                       Status:
                     </span>
                     <span
-                      className={`bg-gray-100 border text-sm font-normal px-5 py-1 rounded-xl flex items-center w-fit justify-center dark:bg-[#F2FFEA] ${
+                      className={`bg-gray-100 border text-sm font-normal px-3 py-[2px] rounded-xl flex items-center justify-center w-[72px] h-[22px] ${
                         item.status
-                          ? "border-green-500 text-green-700 dark:border-[#B0FD81] dark:text-[#40A900]"
+                          ? "border-[#B0FD81] text-[#40A900] bg-[#F2FFEA]"
                           : "border-red-500 text-red-500"
                       }`}
                     >
@@ -161,7 +161,7 @@ export default function TanglerData() {
           <div className=  {` w-full  border-t border-b  text-center h-14 flex items-center justify-center dark:bg-[#212121] border-[#636363]
           ${ theme === "dark" ? "bg-[#212121] text-white" : "bg-white text-black"
         }`}>
-            <p className="text-gray-600 font-normal text-sm dark:text-[#808080]">
+            <p className=" font-normal text-sm font-bold text-[#808080]">
               Click to check transaction history
             </p>
           </div>
