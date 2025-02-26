@@ -5,7 +5,7 @@ import { useState } from "react";
 import RegisterUserModal from "@/components/register-user/RegisterUserModal";
 
 export default function RegisterUser() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="font-satoshi  min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-row items-center justify-between px-12  border border-[#414141] dark:bg-[#0D0D0D] dark:text-white rounded-[20px] relative">

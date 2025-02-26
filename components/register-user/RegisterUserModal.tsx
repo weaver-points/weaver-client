@@ -76,4 +76,3 @@ export default function RegisterUserModal({
     document.body
   );
 } 
-
