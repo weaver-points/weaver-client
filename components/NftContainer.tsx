@@ -16,7 +16,9 @@ export default function NftContainer() {
         <li
           onClick={() => toggleCurrentNft("TanglerData")}
           className={`px-3 cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover: transition-all duration-300 ${
-            currentNFt === "TanglerData" ? " after:w-full" : "text-[#818181]"
+            currentNFt === "TanglerData"
+              ? " after:w-full"
+              : "text-[#818181]"
           }`}
         >
           Tangler
@@ -24,7 +26,9 @@ export default function NftContainer() {
         <li
           onClick={() => toggleCurrentNft("OrbiterData")}
           className={`px-3 cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover: transition-all duration-300 ${
-            currentNFt === "OrbiterData" ? " after:w-full" : "text-[#818181]"
+            currentNFt === "OrbiterData"
+              ? " after:w-full"
+              : "text-[#818181]"
           }`}
         >
           Orbiter
@@ -32,7 +36,9 @@ export default function NftContainer() {
         <li
           onClick={() => toggleCurrentNft("FunnelerData")}
           className={`px-3 text-[#818181] cursor-pointer relative after:content-[' '] after:w-0 after:h-[2px] after:absolute after:bottom-[-10] after:left-0 after:bg-[#E0FFB0] hover:after:w-full after:transition-all after:duration-300 hover: transition-all duration-300 ${
-            currentNFt === "FunnelerData" ? " after:w-full" : "text-[#818181]"
+            currentNFt === "FunnelerData"
+              ? " after:w-full"
+              : "text-[#818181]"
           }`}
         >
           Funneler
