@@ -18,8 +18,8 @@ export default function RegisterUser() {
       />
 
       <div className="min-w-[200px] max-w-[335px] w-[17.43vw]  min-h-[230px]  flex flex-col items-center justify-between text-center">
-        <p className="flex flex-col items-center justify-center text-xl lg:text-[28px]   ">
-          <span className="font-light leading-8 ">Mint NFT</span>
+      <p className="flex flex-col items-center justify-center text-xl lg:text-[28px]   ">
+      <span className="font-light leading-8 ">Mint NFT</span>
           <span className="font-bold  leading-8 ">
             to access
             <br />

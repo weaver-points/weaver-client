@@ -10,7 +10,7 @@ export default function OnboardScreen4() {
         alt="group-img-for-screen1"
         height={100}
         width={100}
-        className="w-[280px] h-[500] object-contain  self-end "
+        className="w-[280px] h-[500px] object-contain self-end -ml-6"
       />
 
       <div className="min-w-[200px] max-w-[335px] w-[17.43vw]  min-h-[230px]  flex flex-col items-center justify-between text-center">
