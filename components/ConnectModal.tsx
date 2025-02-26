@@ -1,21 +1,32 @@
 import React from "react";
 import GenericModal from "./GenericModal";
 
-function ConnectModal({ handleClose }: { handleClose: () => void }) {
+interface ConnectModalProps {
+  handleClose: () => void;
+  onAccept?: () => void; 
+}
+
+const ConnectModal: React.FC<ConnectModalProps> = ({ handleClose, onAccept }) => {
   return (
     <GenericModal handleClose={handleClose}>
-      <img src="/weaver-logo.svg" className="w-[71px]" alt="" />
+      <img src="/weaver-logo.svg" className="w-[71px]" alt="Weaver Logo" />
       <div className="flex flex-col items-center mt-[38px] text-center">
-        <img src="/WeaverSpider.svg" className="w-[164px] mb-[22px]" alt="" />
-        <h3 className="text-base text-white font-semibold">
-          Connecting Wallet...
-        </h3>
+        <img src="/WeaverSpider.svg" className="w-[164px] mb-[22px]" alt="Weaver Spider Logo" />
+        <h3 className="text-base text-white font-semibold">Connecting Wallet...</h3>
         <p className="mt-[25px] text-sm text-[#5A5A5A] max-w-[201px]">
-          Confirm the prompt to connect wallet to Weaver
+          Confirm the prompt to connect your wallet to Weaver.
         </p>
+        {onAccept && (
+          <button
+            onClick={onAccept}
+            className="mt-5 px-6 py-2 bg-[#EDFFD0] text-black font-medium rounded-md transition hover:scale-105"
+          >
+            Accept & Verify Wallet
+          </button>
+        )}
       </div>
     </GenericModal>
   );
-}
+};
 
 export default ConnectModal;

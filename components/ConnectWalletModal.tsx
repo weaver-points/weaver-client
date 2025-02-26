@@ -1,17 +1,26 @@
 "use client";
 
 import { IoMdClose } from "@/utils/icons";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 interface ConnectWalletModalProps {
   onCloseModal: React.Dispatch<React.SetStateAction<boolean>>;
+  onAccept: () => void;
 }
 
 export default function ConnectWalletModal({
   onCloseModal,
+  onAccept,
 }: ConnectWalletModalProps) {
   const [collapsed, setCollapsed] = useState(true);
+  const [sliceNumber, setSliceNumber] = useState(4);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    setSliceNumber(window.innerWidth < 768 ? 3 : 4);
+  }, []);
 
   const fullText = [
     "I am not a person or company who is a resident of, or is located, incorporated or has a registered agent in, the United States or a restricted location.",
@@ -21,9 +30,9 @@ export default function ConnectWalletModal({
     "I understand DeFi is a new phenomenon, and understand and undertake any technological and market risks associated with it.",
   ];
 
-  const sliceNumber = window.innerWidth < 768 ? 3 : 4;
-
   const collapsedText = fullText.slice(0, sliceNumber);
+
+  if (!isClient) return null; 
 
   return createPortal(
     <div
@@ -31,38 +40,31 @@ export default function ConnectWalletModal({
       onClick={() => onCloseModal(false)}
     >
       <div
-        className="border border-[#414141]  rounded-[20px] px-5 py-5 space-y-3 w-[80vw] max-w-[493px] 2xl:w-2/5 "
+        className="border border-[#414141] rounded-[20px] px-5 py-5 space-y-3 w-[80vw] max-w-[493px] 2xl:w-2/5"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center">
-          <h2 className="font-medium  text-xl">
-            Wallet Verification
-          </h2>
+          <h2 className="font-medium text-xl">Wallet Verification</h2>
           <IoMdClose
             size={30}
-            className="cursor-pointer "
+            className="cursor-pointer"
             onClick={() => onCloseModal(false)}
           />
         </div>
         <div className="space-y-4">
-          <p className="font-thin  opacity-[90%]">
+          <p className="font-thin opacity-[90%]">
             By verifying your wallet, you agree to our{" "}
-            <span className="underline">Terms of Service</span> and
-            <span className="underline"> Privacy Policy.</span>
+            <span className="underline">Terms of Service</span> and{" "}
+            <span className="underline">Privacy Policy</span>.
           </p>
           <div className="space-y-2">
             <div>
-              {(collapsed ? collapsedText : fullText).map(
-                (paragraph, index) => (
-                  <p
-                    key={index}
-                    className="font-thin text-sm  mt-2"
-                  >
-                    {paragraph}
-                  </p>
-                )
-              )}
-              <span>{collapsed && "..."}</span>
+              {(collapsed ? collapsedText : fullText).map((paragraph, index) => (
+                <p key={index} className="font-thin text-sm mt-2">
+                  {paragraph}
+                </p>
+              ))}
+              {collapsed && <span>...</span>}
             </div>
             <span
               className="cursor-pointer text-[#EDFFD0]"
@@ -71,7 +73,10 @@ export default function ConnectWalletModal({
               {collapsed ? "See more" : "See less"}
             </span>
           </div>
-          <button className="w-full bg-[#EDFFD0] py-3 text-center text-base text-[#000000] font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.02]">
+          <button
+            onClick={onAccept}
+            className="w-full bg-[#EDFFD0] py-3 text-center text-base text-[#000000] font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.02]"
+          >
             Accept & Verify Wallet
           </button>
         </div>

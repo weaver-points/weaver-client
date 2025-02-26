@@ -10,13 +10,13 @@ function GenericModal({
   handleClose: () => void;
   children: React.ReactNode;
 }) {
-  return (
+  return ( 
     <>
       {createPortal(
         <>
           <LockBodyScroll lock={true} />
           <div
-            className="absolute inset-0 bg-black dark:bg-white bg-opacity-70 backdrop-blur-sm flex justify-center items-center"
+            className="absolute inset-0 bg-black dark:bg-white bg-opacity-70 backdrop-blur-sm flex justify-center items-center z-10"
             onClick={handleClose}
           >
             <div
