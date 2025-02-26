@@ -39,7 +39,8 @@ export default function RegisterUser() {
 
       {/* Updated Text Container */}
       <div className="min-w-[200px] max-w-[335px] w-[17.43vw] min-h-[230px] flex flex-col justify-between">
-        <p className="flex flex-col items-start justify-center">
+        {/* Header with added margin-bottom */}
+        <p className="flex flex-col items-start justify-center mb-6"> {/* Added mb-6 for margin-bottom */}
           <span className="font-satoshi font-light text-[27.13px] leading-[32.3px] tracking-[-0.04em] text-left">
             NFT mint processing
           </span>
@@ -86,61 +87,57 @@ export default function RegisterUser() {
 
           <div className="mt-4 w-[424px] h-[42px] g-[2px]">
             <p className="text-left text-sm font-satoshi font-light">
-              ID verification Fee:$0.00
+              ID verification Fee: $0.00
             </p>
             <p className="text-left text-sm text-gray-500 font-satoshi font-light">
               Age verification notice: You must be at least 18 years old.
             </p>
           </div>
-{/* Checkbox 1 */}
-<div className="mt-4">
-            <label className="flex items-center">
+
+          {/* Checkbox 1 */}
+          <div className="mt-4">
+            <label className="flex items-center text-sm text-gray-400 mb-3">
               <input
                 type="checkbox"
                 checked={termsAccepted}
                 onChange={handleTermsAcceptance}
-                className="mr-2 border border-[#444444] w-5 h-5"
-                style={{ color: "#444444" }}
+                className="w-5 h-5 mr-2"
               />
-              <span className="text-left text-sm text-gray-500 font-satoshi font-light">
-                please read our{" "}
-                <a href="#" className="text-blue-500">
-                  Privacy Policy
-                </a>{" "}
-                and{" "}
-                <a href="#" className="text-blue-500">
-                  Terms of Service
-                </a>
-              </span>
+              I have read the{" "}
+              <a href="#" className="text-blue-500 ml-1">
+                Privacy Policy
+              </a>{" "}
+              and{" "}
+              <a href="#" className="text-blue-500">
+                Terms of Service
+              </a>
+              .
             </label>
           </div>
 
           {/* Checkbox 2 */}
           <div className="mt-4">
-            <label className="flex items-center">
+            <label className="flex items-center text-sm text-gray-400 mb-6">
               <input
                 type="checkbox"
                 checked={identityVerified}
                 onChange={() => setIdentityVerified(!identityVerified)}
-                className="mr-2 border border-[#444444] w-5 h-5"
-                style={{ color: "#232222" }}
+                className="w-5 h-5 mr-2"
               />
-              <span className="text-left text-sm text-gray-500 font-satoshi font-light">
-                Note: You need to be 18 and above. The verification fee is
-                not-refundable, if your ID is declined.
-              </span>
+              Note: You need to be 18 and above. Verification fee is non-refundable
+              if declined.
             </label>
           </div>
 
-{/* Pay Button */}
-<button
-  className="w-full bg-[#EDFFD0] py-3 text-center text-base font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1] text-[#0D0D0D] mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
-  onClick={handlePayment}
-  disabled={!termsAccepted || !identityVerified || paymentProcessing} // Ensure both checkboxes are checked
->
-  {paymentProcessing ? "Processing..." : "Pay"}
-</button>
-</div>
+          {/* Pay Button */}
+          <button
+            className="w-full bg-[#EDFFD0] py-3 text-center text-base font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1] text-[#0D0D0D] mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={handlePayment}
+            disabled={!termsAccepted || !identityVerified || paymentProcessing} // Ensure both checkboxes are checked
+          >
+            {paymentProcessing ? "Processing..." : "Pay"}
+          </button>
+        </div>
 
         {isModalOpen && <RegisterUserModal onCloseModal={setIsModalOpen} />}
       </div>
