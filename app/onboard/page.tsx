@@ -29,6 +29,24 @@ export default function Onboard() {
     <RegisterUser />,
   ];
 
+  const handleSlideChange = (swiper) => {
+    const currentIndex = swiper.activeIndex;
+    const lastSlideIndex = onBoardSlides.length - 1;
+
+    // Enable autoplay only for the first two slides
+    if (currentIndex <= 1) {
+      setIsAutoplay(true);
+      setShowButtons(false); // Hide buttons for the first two slides
+    } else {
+      setIsAutoplay(false);
+      setShowButtons(true); // Show buttons for remaining slides
+      if (swiperRef.current) swiperRef.current.autoplay.stop(); // Stop autoplay
+    }
+
+    // Check if it's the last slide
+    setIsLastSlide(currentIndex === lastSlideIndex);
+  };
+
   return (
     <div className="min-h-screen flex justify-center items-center">
       <Swiper
@@ -36,23 +54,7 @@ export default function Onboard() {
         autoplay={
           isAutoplay ? { delay: 3000, disableOnInteraction: true } : false
         }
-        onSlideChange={(swiper) => {
-          const currentIndex = swiper.activeIndex;
-          const lastSlideIndex = onBoardSlides.length - 1;
-
-          // Enable autoplay only for the first two slides
-          if (currentIndex <= 1) {
-            setIsAutoplay(true);
-            setShowButtons(false); // Hide buttons for the first two slides
-          } else {
-            setIsAutoplay(false);
-            setShowButtons(true); // Show buttons for remaining slides
-            if (swiperRef.current) swiperRef.current.autoplay.stop(); // Stop autoplay
-          }
-
-          // Check if it's the last slide
-          setIsLastSlide(currentIndex === lastSlideIndex);
-        }}
+        onSlideChange={handleSlideChange}
         onSwiper={(swiper) => {
           swiperRef.current = swiper; // Save swiper instance
         }}
@@ -71,9 +73,9 @@ export default function Onboard() {
       </Swiper>
 
       {/* Conditionally render navigation buttons */}
-      {showButtons && !isLastSlide && (
+      {showButtons && (
         <>
-          {/* Left navigation button */}
+          {/* Left navigation button (always visible except on the first two slides) */}
           <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
@@ -82,14 +84,16 @@ export default function Onboard() {
             <HiOutlineChevronLeft size={30} />
           </button>
 
-          {/* Right navigation button */}
-          <button
-            onClick={() => swiperRef.current?.slideNext()}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
-            aria-label="Next slide"
-          >
-            <HiOutlineChevronRight size={30} />
-          </button>
+          {/* Right navigation button (hidden on the last slide) */}
+          {!isLastSlide && (
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
+              aria-label="Next slide"
+            >
+              <HiOutlineChevronRight size={30} />
+            </button>
+          )}
         </>
       )}
     </div>

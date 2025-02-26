@@ -28,7 +28,7 @@ export default function RegisterUser() {
   };
 
   return (
-    <div className="font-satoshi w-[1032px] h-[675px] top-[174px] left-[204px] flex flex-row items-center justify-between px-12 border border-[#414141] dark:bg-[#0D0D0D] dark:text-white rounded-[20px] absolute">
+    <div className="font-satoshi w-[1032px] h-[675px] flex flex-row items-center justify-between px-12 border border-[#414141] dark:bg-[#0D0D0D] dark:text-white rounded-[20px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
       <Image
         src="/RegisterUser.svg"
         alt="group-img-for-screen1"
@@ -40,7 +40,7 @@ export default function RegisterUser() {
       {/* Updated Text Container */}
       <div className="min-w-[200px] max-w-[335px] w-[17.43vw] min-h-[230px] flex flex-col justify-between">
         {/* Header with added margin-bottom */}
-        <p className="flex flex-col items-start justify-center mb-6"> {/* Added mb-6 for margin-bottom */}
+        <p className="flex flex-col items-start justify-center mb-6">
           <span className="font-satoshi font-light text-[27.13px] leading-[32.3px] tracking-[-0.04em] text-left">
             NFT mint processing
           </span>
@@ -133,7 +133,7 @@ export default function RegisterUser() {
           <button
             className="w-full bg-[#EDFFD0] py-3 text-center text-base font-[500] rounded-[8px] transform transition duration-300 hover:scale-[1.1] text-[#0D0D0D] mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={handlePayment}
-            disabled={!termsAccepted || !identityVerified || paymentProcessing} // Ensure both checkboxes are checked
+            disabled={!termsAccepted || !identityVerified || paymentProcessing}
           >
             {paymentProcessing ? "Processing..." : "Pay"}
           </button>
