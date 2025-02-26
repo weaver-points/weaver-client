@@ -19,3 +19,5 @@ function ConnectedModal({ handleClose }: { handleClose: () => void }) {
 }
 
 export default ConnectedModal;
+
+
