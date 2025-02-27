@@ -1,36 +1,38 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { HiSun } from "react-icons/hi"; // Import the sun icon
-import { useTheme } from "next-themes"; // Import theme hook
+import React from "react";
+import Image from "next/image";
 
 function Header() {
-  const { theme, setTheme } = useTheme(); // Access theme state
-
-  // Ensure the default theme is set to dark
-  useEffect(() => {
-    if (!theme) setTheme("dark");
-  }, [theme, setTheme]);
-
   return (
-    <div
-      className={`flex justify-end items-center p-4 ${
-        theme === "dark" ? "bg-[#0D0D0D] text-white" : "bg-white text-black"
-      }`}
-    >
-      <button
-        className="flex items-center justify-center p-2 rounded-full bg-gray-700 hover:bg-gray-600"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")} // Toggle theme
-        aria-label="Toggle Theme"
-      >
-        <HiSun
-          className={`text-2xl ${
-            theme === "dark" ? "text-yellow-400" : "text-gray-300"
-          }`}
-        />
-      </button>
+    <div>
+      <div className="max-w-[652px] w-full flex flex-col items-center justify-start gap-5">
+        <div className="flex flex-col items-center justify-center gap-7 max-w-[390.17px] max-h-[150px] ">
+          <Image
+            src="/weaver.svg"
+            alt="weaver-logo"
+            height={100}
+            width={100}
+          />
+          <div className="flex flex-row items-center justify-between w-full gap-3">
+            <Image
+              src="/first-group-image.svg"
+              alt="group-img-for-screen1"
+              height={128}
+              width={280}
+              className="w-[210px] h-[85px] "
+            />
+            <p className=" text-xl ">
+              <span className="font-light "> Lightweight </span> <br />
+              on-chain identity <br />
+              platform
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default Header;
+

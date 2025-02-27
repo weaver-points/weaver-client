@@ -9,7 +9,7 @@ export default function OnboardScreen2() {
         height={267}
         width={255}
       />
-      <Image src="/weaver-logo.svg" alt="weaver-logo" height={100} width={100} />
+      <Image src="/weaver.svg" alt="weaver-logo" height={100} width={100} />
     </div>
   );
 }

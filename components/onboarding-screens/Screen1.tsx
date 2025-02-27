@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function OnboardScreen1() {
   return (
     <div className="flex flex-col justify-center items-center space-y-5 dark:bg-[#0D0D0D] dark:text-white">
-      <p className="text-base">
+      <p className="text-[16px]">
         <span className="font-thin font-satoshi">
           Lightweight
         </span>{" "}
@@ -18,7 +18,7 @@ export default function OnboardScreen1() {
         height={128}
         width={280}
       />
-      <Image src="/weaver-logo.svg" alt="weaver-logo" height={100} width={100} />
+      <Image src="/weaver.svg" alt="weaver-logo" height={100} width={100} />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import GenericModal from "./GenericModal";
 function ConnectModal({ handleClose }: { handleClose: () => void }) {
   return (
     <GenericModal handleClose={handleClose}>
-      <img src="/weaver-logo.svg" className="w-[71px]" alt="" />
+      <img src="/weaver.svg" className="w-[71px]" alt="" />
       <div className="flex flex-col items-center mt-[38px] text-center">
         <img src="/WeaverSpider.svg" className="w-[164px] mb-[22px]" alt="" />
         <h3 className="text-base text-white font-semibold">

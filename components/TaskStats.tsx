@@ -5,14 +5,8 @@ import { useTheme } from "@/components/ThemeContext";
 
 export default function TaskStats() {
   const { theme } = useTheme();
-  const point = 50
+  const point = 40
   const totalPoint = 100
-
-
-
-
-
-
 
   return (
     <div className= {` border-2 border-[#1D1D1D] w-full space-y-5 h-auto my-4 rounded-t-[10px]  rounded-b-none px-10 py-5
@@ -44,7 +38,7 @@ export default function TaskStats() {
             />
             <p className="font-bold text-xl">argent</p>
           </div>
-          <p className="border border-gray-600 font-thin py-0.5 px-7 rounded-lg mt-7">
+          <p className="border border-gray-600/20 font-thin py-0.5 px-7 rounded-lg mt-7">
             Balance
           </p>
         </div>
@@ -52,3 +46,4 @@ export default function TaskStats() {
     </div>
   );
 }
+

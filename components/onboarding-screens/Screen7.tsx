@@ -5,7 +5,7 @@ import { useTheme } from "@/components/ThemeContext";
 
 type UseCase = "individual" | "organization" | null;
 
-export default function OnboardScreen7() {
+function OnboardScreen6() {
     const [selectedUseCase, setSelectedUseCase] = useState<UseCase>(null);
     const { theme } = useTheme();
 
@@ -14,13 +14,13 @@ export default function OnboardScreen7() {
     };
 
     return (
-        <div className="font-satoshi  min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-col lg:flex-row items-center justify-between px-16 lg:pl-6 lg:pr-24 lg:gap-5  border border-[#414141] dark:bg-[#0D0D0D] dark:text-white rounded-[20px] relative">
+        <div className="font-satoshi min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-col lg:flex-row items-center justify-between px-16 lg:pl-6 lg:pr-24 lg:gap-5 border border-[#414141] dark:bg-[#0D0D0D] dark:text-white rounded-[20px] relative">
             <Image
                 src="/RegisterUser.svg"
                 alt="group-img-for-screen1"
                 height={100}
                 width={100}
-                className=" lg:w-[380] w-[250] h-[300] lg lg:h-[500]   max-sm:my-3 object-contain  lg:self-end "
+                className="w-[400px] h-[600px] object-contain  self-end -ml-6"
             />
 
             <div className="w-full min-w-[200px] max-w-[335px] md:w-[17.43vw] min-h-[280px] max-md:min-h-[280px] flex flex-col items-center justify-between text-center">
@@ -93,9 +93,11 @@ export default function OnboardScreen7() {
                     }`}
                     disabled={!selectedUseCase}
                 >
-                    Let’s get it 🚀
+                    Let's get it 🚀
                 </button>
             </div>
         </div>
     );
 }
+
+export default OnboardScreen6;
