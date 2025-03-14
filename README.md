@@ -41,3 +41,11 @@ figma design Desktop View: [Weaver Desktop View](https://www.figma.com/design/8m
 Figma desktop onboarding view design: [Weaver onboarding flow](https://www.figma.com/design/wEV47dLGdhsu8GbfkpeAVc/Weaver---Onboarding?m=auto&t=FoM7vbyzwjZT62ZE-6)
 
 Updated figma design Desktop view: [Weaver updated desktop view](https://www.figma.com/design/w6f7o1GTsgB3rJqSBPg9b5/Weaver---PC-UI-(Updated-UI)?node-id=2-2&t=5ljIMtnRp3hjUuaT-1)
+
+## Continuous Integration
+
+We use GitHub Actions to ensure code quality:
+- Automatic build validation on every push and PR
+- Linting checks
+- Test execution
+- Build verification
