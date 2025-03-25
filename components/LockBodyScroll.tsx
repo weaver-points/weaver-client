@@ -1,32 +1,41 @@
-import { useEffect } from "react";
+"use client";
+import { useEffect, useState } from "react";
 
 interface LockBodyScrollProps {
-  lock: boolean;
+    lock: boolean;
 }
 
 export default function LockBodyScroll({ lock }: LockBodyScrollProps) {
-  useEffect(() => {
-    const originalOverflow = document.body.style.overflow;
-    const originalHeight = document.body.style.height;
+    const [mounted, setMounted] = useState(false);
 
-    if (lock) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
-      document.body.style.transition = "all 0.3s ease-in-out";
-      document.body.style.overflow = "hidden";
-      document.body.style.height = "100vh";
-    } else {
-      document.body.style.transition = "all 0.3s ease-in-out";
-      document.body.style.overflow = originalOverflow;
-      document.body.style.height = originalHeight;
-    }
+    useEffect(() => {
+        if (mounted) {
+            const originalOverflow = document.body.style.overflow;
+            const originalHeight = document.body.style.height;
 
-    return () => {
-      document.body.style.transition = "";
-      document.body.style.overflow = originalOverflow;
-      document.body.style.height = originalHeight;
-    };
-  }, [lock]);
+            if (lock) {
+                window.scrollTo({ top: 0, behavior: "smooth" });
 
-  return null;
+                document.body.style.transition = "all 0.3s ease-in-out";
+                document.body.style.overflow = "hidden";
+                document.body.style.height = "100vh";
+            } else {
+                document.body.style.transition = "all 0.3s ease-in-out";
+                document.body.style.overflow = originalOverflow;
+                document.body.style.height = originalHeight;
+            }
+
+            return () => {
+                document.body.style.transition = "";
+                document.body.style.overflow = originalOverflow;
+                document.body.style.height = originalHeight;
+            };
+        }
+    }, [mounted, lock]);
+
+    return null;
 }
