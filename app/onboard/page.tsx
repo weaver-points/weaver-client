@@ -71,7 +71,7 @@ export default function Onboard() {
             >
                 {onBoardSlides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <div className="h-screen w-full flex justify-center items-center">
+                        <div className="h-screen w-full md:flex justify-center items-center">
                             {slide}
                         </div>
                     </SwiperSlide>
