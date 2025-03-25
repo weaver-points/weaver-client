@@ -7,7 +7,11 @@ export default function ThemeToggle() {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <div className="bg-none flex justify-end items-end">
+        <div
+            className={`flex justify-end items-end ${
+                theme === "dark" ? "bg-black text-white" : "bg-white text-black"
+            }`}
+        >
             <button
                 onClick={toggleTheme}
                 className=" p-2 m-2 rounded-full bg-gray-700 hover:bg-gray-600"

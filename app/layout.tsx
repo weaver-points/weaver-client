@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`${satoshi.variable} antialiased`}>
+            <body className={`${satoshi.variable} antialiased bg-background`}>
                 <ThemeProvider>
                     <ThemeToggle />
                     {children}
