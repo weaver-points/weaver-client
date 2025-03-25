@@ -14,6 +14,7 @@ import OnboardScreen6 from "@/components/onboarding-screens/Screen6";
 import RegisterUser from "@/components/register-user/RegisterUser";
 import OnboardScreen7 from "@/components/onboarding-screens/Screen7";
 import MintAndProcessPage from "@/components/MintAndProcessPage";
+import { useTheme } from "@/components/ThemeContext";
 
 export default function Onboard() {
     const [isAutoplay, setIsAutoplay] = useState(true); // Control autoplay
@@ -50,9 +51,10 @@ export default function Onboard() {
         // Check if it's the last slide
         setIsLastSlide(currentIndex === lastSlideIndex);
     };
+    const { theme } = useTheme();
 
     return (
-        <div className="min-h-screen flex justify-center items-center">
+        <div className="min-h-screen flex justify-center items-center ">
             <Swiper
                 modules={[Autoplay]}
                 autoplay={
@@ -71,7 +73,13 @@ export default function Onboard() {
             >
                 {onBoardSlides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <div className="h-screen w-full flex justify-center items-center">
+                        <div
+                            className={`h-screen w-full md:flex justify-center items-center ${
+                                theme === "dark"
+                                    ? "bg-black text-white"
+                                    : "bg-white text-black"
+                            }`}
+                        >
                             {slide}
                         </div>
                     </SwiperSlide>

@@ -26,25 +26,25 @@ export default function MintAndProcessPage() {
     };
 
     return (
-        <div className="font-satoshi w-[1032px] h-[675px] flex flex-row items-center justify-between px-12 border border-[#414141] dark:bg-[#0D0D0D] dark:text-white rounded-[20px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="font-satoshi min-w-[53.75vw] max-w-[1032px] min-h-[63.5vh] max-h-[700px] flex flex-col md:flex-row items-center justify-between px-12 md:border border-[#414141] dark:bg-[#0D0D0D] dark:text-white rounded-[20px]">
             <Image
                 src="/RegisterUser.svg"
                 alt="group-img-for-screen1"
                 height={100}
                 width={100}
-                className="w-[537px] h-[654px] object-contain self-end"
+                className="block w-[300px] md:w-[537px] md:h-[654px] object-contain md:self-end"
             />
 
             {/* Updated Text Container */}
-            <div className="min-w-[200px] max-w-[335px] w-[17.43vw] min-h-[230px] flex flex-col justify-between">
+            <div className="md:min-w-[200px] md:max-w-[335px] md:w-[17.43vw] min-h-[230px] flex flex-col justify-between items-center">
                 {/* Header with added margin-bottom */}
-                <p className="flex flex-col items-start justify-center mb-6">
+                <p className="md:flex flex-col items-start justify-center mb-6">
                     <span className="font-satoshi font-light text-[27.13px] leading-[32.3px] tracking-[-0.04em] text-left">
                         NFT mint processing
                     </span>
                 </p>
 
-                <div className="w-full">
+                <div className="md:w-full w-[80%] mx-auto">
                     <div className="text-left">
                         <div className="mt-4">
                             {/* Numbered Item 1 */}
@@ -96,12 +96,12 @@ export default function MintAndProcessPage() {
 
                     {/* Checkbox 1 */}
                     <div className="mt-4">
-                        <label className="flex items-center text-sm text-gray-400 mb-3">
+                        <label className="flex text-xs text-gray-400 mb-3">
                             <input
                                 type="checkbox"
                                 checked={termsAccepted}
                                 onChange={handleTermsAcceptance}
-                                className="w-5 h-5 mr-2"
+                                className="w-5 h-5 mr-2 bg-[#444444]"
                             />
                             I have read the{" "}
                             <a href="#" className="text-blue-500 ml-1">
@@ -114,20 +114,18 @@ export default function MintAndProcessPage() {
                             .
                         </label>
                     </div>
-
-                    {/* Checkbox 2 */}
                     <div className="mt-4">
-                        <label className="flex items-center text-sm text-gray-400 mb-6">
+                        <label className="flex text-xs text-gray-400 mb-3">
                             <input
                                 type="checkbox"
                                 checked={identityVerified}
                                 onChange={() =>
                                     setIdentityVerified(!identityVerified)
                                 }
-                                className="w-5 h-5 mr-2"
+                                className="w-8 h-8 mr-2 bg-[#444444]"
                             />
-                            Note: You need to be 18 and above. Verification fee
-                            is non-refundable if declined.
+                            Note: You need to be 18 and above. The verification
+                            fee is not-refundable, if your ID is declined.
                         </label>
                     </div>
 
