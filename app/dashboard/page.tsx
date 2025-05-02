@@ -4,6 +4,7 @@ import NftContainer from "@/components/NftContainer";
 import StatsBox from "@/components/StatsBox";
 import Header from "@/components/Header";
 import { useTheme } from "@/components/ThemeContext";
+import ConnectButton from "@/components/ConnectButton";
 
 export default function Dashboard() {
     const { theme } = useTheme();
@@ -17,6 +18,8 @@ export default function Dashboard() {
                 }`}
             >
                 <div className="max-w-[652px] md:w-full flex flex-col items-center justify-start gap-10">
+
+                   <ConnectButton/>
                     <Header />
                     <StatsBox />
                     <NftContainer />
