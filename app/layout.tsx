@@ -13,7 +13,7 @@ const satoshi = localFont({
 export const metadata: Metadata = {
     title: "Weaver",
 };
-
+// 
 export default function RootLayout({
     children,
 }: Readonly<{
