@@ -19,16 +19,39 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
 .taskProgressBar::-webkit-progress-bar {
   background-color: #f0f0f0;
   border-radius: 4px;
 }
+
 .taskProgressBar::-webkit-progress-value {
   background-color: #c4ff63;
   border-radius: 4px;
 }
+
 .animate__animated.animate__zoomIn {
   --animate-duration: 0.3s;
+}
+
+.nft-pattern {
+  background-image: url("/nft-guy.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.dao-pattern {
+  background-image: url("/dao-guy.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @layer base {
@@ -59,6 +82,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -91,6 +115,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
