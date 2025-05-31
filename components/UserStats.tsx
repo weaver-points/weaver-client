@@ -61,13 +61,20 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
                     </div>
 
 
-                    <div className=" basis-1/2 flex items-start justify-center gap-4  ">
+                    <div className=" basis-1/2 flex items-start justify-center gap-6  ">
 
                     <button className="py-3 px-6 flex items-center justify-center gap-[5px] text-2xl font-bold text-[#70750B] bg-[#EBFFCB] border-[1px] border-[#988C8C] rounded-lg " > <PiPlus/> Follow</button>
 
-                    <div className=" bg-[#232222] flex items-center justify-center rounded-[10px] gap-2 " >
-                        <div className="flex flex-col items-center gap-1">
-                            <p></p>
+                    <div className=" bg-[#232222] flex items-center justify-center rounded-[10px] gap-6 py-4 px-5 " >
+                        <div className="flex flex-col items-start gap-1">
+                            <small className="font-normal text-[#988C8C] text-base  " >Followers</small>
+                            <p className=" text-[#FFFFFF] font-bold text-[22px] " >8,674</p>
+                        </div>
+
+<div className="w-[1px] h-10 bg-gray-400 mx-4"></div>
+                        <div className="flex flex-col items-start gap-1">
+                            <small className="font-normal text-[#988C8C] text-base  " >Token</small>
+                            <p  className=" text-[#FFFFFF] font-bold text-[22px] " >TGE Upcoming</p>
                         </div>
 
                     </div>
