@@ -25,7 +25,7 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
 
             <div className=" w-full flex flex-col gap-10 items-start  pl-[10%] px-[4%] " >
 
-                <div className=" w-[138px] h-[138px] rounded-full bg-transparent flex items-center justify-center border-[5px] border-[#FEF6E7] " >
+                <div className=" w-[138px] h-[138px] rounded-full bg-transparent flex items-center justify-center border-[5px] border-[#FEF6E7] mt-[-60px] " >
                     <Image src={"/user-icon.svg"} alt="user profile image" height={100} width={100} className=" rounded-full bg-cover bg-center h-[103px] w-[103px] " />
                 </div>
 
@@ -52,9 +52,9 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
                         <p className="text-lg font-normal text-[#988C8C] " >{projectDescription}</p>
 
                         <div className="flex items-center gap-6" >
-                          {socialLinks.map((link, index) => (
-                            <Link key={index} href={link.link} >   <button className="text-[#757575] " >{link.icon} </button> </Link>
-                          ))}
+                            {socialLinks.map((link, index) => (
+                                <Link key={index} href={link.link} >   <button className="text-[#757575] " >{link.icon} </button> </Link>
+                            ))}
 
                         </div>
 
@@ -63,21 +63,21 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
 
                     <div className=" basis-1/2 flex items-start justify-center gap-6  ">
 
-                    <button className="py-3 px-6 flex items-center justify-center gap-[5px] text-2xl font-bold text-[#70750B] bg-[#EBFFCB] border-[1px] border-[#988C8C] rounded-lg " > <PiPlus/> Follow</button>
+                        <button className="py-3 px-6 flex items-center justify-center gap-[5px] text-2xl font-bold text-[#70750B] bg-[#EBFFCB] border-[1px] border-[#988C8C] rounded-lg " > <PiPlus /> Follow</button>
 
-                    <div className=" bg-[#232222] flex items-center justify-center rounded-[10px] gap-6 py-4 px-5 " >
-                        <div className="flex flex-col items-start gap-1">
-                            <small className="font-normal text-[#988C8C] text-base  " >Followers</small>
-                            <p className=" text-[#FFFFFF] font-bold text-[22px] " >8,674</p>
+                        <div className=" bg-[#232222] flex items-center justify-center rounded-[10px] gap-6 py-4 px-5 " >
+                            <div className="flex flex-col items-start gap-1">
+                                <small className="font-normal text-[#988C8C] text-base  " >Followers</small>
+                                <p className=" text-[#FFFFFF] font-bold text-[22px] " >8,674</p>
+                            </div>
+
+                            <div className="w-[1px] h-10 bg-gray-400 mx-4"></div>
+                            <div className="flex flex-col items-start gap-1">
+                                <small className="font-normal text-[#988C8C] text-base  " >Token</small>
+                                <p className=" text-[#FFFFFF] font-bold text-[22px] " >TGE Upcoming</p>
+                            </div>
+
                         </div>
-
-<div className="w-[1px] h-10 bg-gray-400 mx-4"></div>
-                        <div className="flex flex-col items-start gap-1">
-                            <small className="font-normal text-[#988C8C] text-base  " >Token</small>
-                            <p  className=" text-[#FFFFFF] font-bold text-[22px] " >TGE Upcoming</p>
-                        </div>
-
-                    </div>
 
                     </div>
 
