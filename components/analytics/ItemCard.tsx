@@ -12,6 +12,12 @@ export default function ItemCard() {
                     <Image src={"/item-image.svg"} alt="item image" height={100} width={100} className="h-[65%] w-full object-cover object-center " />
                     <div className="px-6 py-5 flex  items-center justify-between gap-10 " >
 
+                        <div className="flex flex-col items-start gap-1" >
+                            <h3 className="text-lg font-medium text-white  " >date here </h3>
+                            <p className="text-[#988C8C] text-sm font-medium " >to date heere </p>
+
+                        </div>
+
 
 <span className=" rounded-[15px] bg-[#FFFFFF] flex items-center justify-center gap-1 text-[#8BB151] font-medium text-xs px-4  py-2 " >
     Live
