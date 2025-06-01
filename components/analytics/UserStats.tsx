@@ -25,8 +25,8 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
 
             <div className=" w-full flex flex-col gap-10 items-start  pl-[10%] px-[4%] " >
 
-                <div className=" w-[138px] h-[138px] rounded-full bg-transparent flex items-center justify-center border-[5px] border-[#FEF6E7] mt-[-60px] " >
-                    <Image src={"/user-icon.svg"} alt="user profile image" height={100} width={100} className=" rounded-full bg-cover bg-center h-[103px] w-[103px] " />
+                <div className=" w-[100px] h-[100px] md:w-[138px] md:h-[138px] rounded-full bg-transparent flex items-center justify-center border-[5px] border-[#FEF6E7] mt-[-60px] " >
+                    <Image src={"/user-icon.svg"} alt="user profile image" height={100} width={100} className=" rounded-full bg-cover bg-center h-[80px] w-[80px] md:h-[103px] md:w-[103px] " />
                 </div>
 
 
@@ -38,8 +38,8 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
                             <h1 className="font-medium text-3xl md:text-5xl text-[#FFFFFF] " >Coiton</h1>
 
                             <div className="flex items-center gap-4" >
-                                <button className="flex items-center justify-center border-[1px] border-[#EBFFCB] p-[13px] rounded-[4px] text-white "><FaEllipsis size={25} /> </button>
-                                <button className="flex items-center justify-center border-[1px] border-[#EBFFCB] p-[13px] rounded-[4px] text-white"><BsTwitterX size={25} /> </button>
+                                <button className="flex items-center justify-center border-[1px] border-[#EBFFCB] p-[13px] rounded-[4px] text-white "><FaEllipsis className=" text-xs md:text-[25px] " /> </button>
+                                <button className="flex items-center justify-center border-[1px] border-[#EBFFCB] p-[13px] rounded-[4px] text-white"><BsTwitterX className=" text-xs md:text-[25px] " /> </button>
                             </div>
                         </div>
 

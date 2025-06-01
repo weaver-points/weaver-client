@@ -29,11 +29,11 @@ export default function UserNav() {
 
                 <button className="flex items-center gap-2 md:gap-4 ">
                     <div className="flex flex-col gap-1 md:gap-2 items-start " >
-                        <p className="font-medium text-base md:text-xl text-[#FFFFFF] flex items-center gap-2 " >Coiton <Image src={"/blue-tick.svg"} alt="icon" height={100} width={100} className="w-[22px] h-[21px] " /> </p>
-                        <p className="text-lg font-normal text-[#988C8C]  " >0x742d...f44e</p>
+                        <p className="font-medium text-sm md:text-xl text-[#FFFFFF] flex items-center gap-2 " >Coiton <Image src={"/blue-tick.svg"} alt="icon" height={100} width={100} className="w-[22px] h-[21px] " /> </p>
+                        <p className="text-xs md:text-lg font-normal text-[#988C8C]  " >0x742d...f44e</p>
                     </div>
 
-                    <BiChevronDown size={25} />
+                    <BiChevronDown  className="text-[20px] md:text-[25px] " />
                 </button>
 
 

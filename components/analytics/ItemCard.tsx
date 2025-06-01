@@ -15,7 +15,7 @@ interface ItemcardProp {
 
 export default function ItemCard({ data }: ItemcardProp) {
     return (
-        <div className="w-full max-w-[520px] h-[273px] rounded-lg border-[1px] border-[#988C8C] relative overflow-hidden cursor-pointer " >
+        <div className="w-full max-w-[520px] h-[273px] rounded-lg border-[1px] border-[#988C8C] relative overflow-hidden cursor-pointer hover:scale-105 transition-all duration-150 ease-in-out " >
             <div className="absolute top-0 left-0 w-full h-full flex flex-col items-start gap-0 " >
                 <div className="w-full h-full bg-[#1E1E1E] " >
                     <div className=" h-[64%] w-full flex items-center justify-center relative" >

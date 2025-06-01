@@ -38,7 +38,7 @@ export default function AnalyticsChart() {
   const data = timeframe === "weekly" ? weeklyData : monthlyData
 
   return (
-    <div className="w-full h-fit  p-6">
+    <div className="w-full h-fit  p-3 md:p-6">
       <div className="flex justify-end mb-6">
         <select
           value={timeframe}
@@ -60,8 +60,6 @@ export default function AnalyticsChart() {
             data={data}
             margin={{
               top: 20,
-              right: 30,
-              left: 20,
               bottom: 20,
             }}
           >
