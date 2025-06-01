@@ -38,7 +38,7 @@ export default function RegisterUserModal({
       onClick={() => onCloseModal(false)}
     >
       <div
-        className="border border-[#414141] bg-[#181717] rounded-[20px] px-5 py-5 space-y-3 w-[80vw] max-w-[493px] 2xl:w-2/5"
+        className="border border-[#414141] bg-[#181717] rounded-[20px] px-4 py-4 space-y-2 w-[200vw] max-w-[370px] 2xl:w-1/3"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center">
@@ -76,4 +76,3 @@ export default function RegisterUserModal({
     document.body
   );
 } 
-

@@ -1,0 +1,85 @@
+name: Build Validation
+
+on:
+  # There is only the main branch, so I have excluded master
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./
+
+    strategy:
+      matrix:
+        node-version: [18.18.0]
+
+    steps:
+    # Step 1: Checkout the code from the repo
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Step 2: Set up Node.js (version specified above)
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    # Step 3: Cache dependencies to avoid reinstall on every push
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          node_modules
+          .next/cache
+        key: ${{ runner.os }}-nextjs-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nextjs-
+
+    # Step 4: Install dependencies using npm
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Check for lint config
+      id: lint-check
+      run: |
+        if [ -f .eslintrc* ] || grep -q '"lint"' package.json; then
+          echo "lint_required=true" >> $GITHUB_OUTPUT
+        fi
+
+    # Step 5: Run linter
+    - name: Run Linter
+      if: steps.lint-check.outputs.lint_required == 'true'
+      run: npm run lint
+
+    # Step 6: Build the project for deployment and/or testing
+    - name: Build project
+      run: npm run build
+
+    - name: Check for test config
+      id: test-check
+      run: |
+        if [ -f jest.config.* ] || [ -f vitest.config.* ] || grep -q '"test"' package.json; then
+          echo "test_required=true" >> $GITHUB_OUTPUT
+        fi
+
+    # Step 7: run tests on the project if available
+    - name: Run Tests
+      if: steps.test-check.outputs.test_required == 'true'
+      run: npm test
+
+    # Step 8: Upload build artifacts (optional, for debugging or deployment)
+    - name: Upload Build Artifacts
+      if: success()
+      uses: actions/upload-artifacts@v4
+      with: 
+        name: build
+        path: build/

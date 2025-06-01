@@ -36,6 +36,17 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
-figma desigm Desktop View: [Weaver Desktop View](https://www.figma.com/design/8myxec6w5hwleSPA7v7u1X/Weaver---PC-UI?node-id=2-2&t=OxY8h7UZmRjHH9VG-1)
+figma design Desktop View: [Weaver Desktop View](https://www.figma.com/design/8myxec6w5hwleSPA7v7u1X/Weaver---PC-UI?node-id=2-2&t=OxY8h7UZmRjHH9VG-1)
 
 Figma desktop onboarding view design: [Weaver onboarding flow](https://www.figma.com/design/wEV47dLGdhsu8GbfkpeAVc/Weaver---Onboarding?m=auto&t=FoM7vbyzwjZT62ZE-6)
+
+Updated figma design Desktop view: [Weaver updated desktop view](https://www.figma.com/design/w6f7o1GTsgB3rJqSBPg9b5/Weaver---PC-UI-(Updated-UI)?node-id=2-2&t=5ljIMtnRp3hjUuaT-1)
+Rebranded figma design for weaver: [Weaver rebrand](https://www.figma.com/design/JO1BCPiKkbtQnRpChoCp0v/Weaver--New-?node-id=0-1&t=bKpJvUYaOoQNzQCG-1)
+
+## Continuous Integration
+
+We use GitHub Actions to ensure code quality:
+- Automatic build validation on every push and PR
+- Linting checks
+- Test execution
+- Build verification

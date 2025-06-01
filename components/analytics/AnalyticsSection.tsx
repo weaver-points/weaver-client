@@ -30,7 +30,7 @@ export default function AnalyticsSection({data}: AnalyticsSectionProps) {
   };
 
   return (
-    <section className="w-full max-w-[80%] mx-auto mt-[50px]">
+    <section className="w-full max-w-[1400px] mx-auto mt-[50px] md:px-0 px-4 ">
       {/* Nav buttons */}
       <div className="w-full flex items-center gap-10 border-b-[2px] border-[#988C8C4F] pb-2">
         <button

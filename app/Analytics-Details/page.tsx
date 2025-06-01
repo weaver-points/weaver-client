@@ -46,7 +46,7 @@ export default function Page() {
             />
 
 
-            <section className="w-full max-w-[80%] mx-auto mt-[50px]">
+            <section className="w-full max-w-[1400px] mx-auto mt-[50px] px-4 md:px-0 ">
                 {/* Nav buttons */}
                 <div className="w-full flex items-center gap-10 border-b-[2px] border-[#988C8C4F] pb-2">
                     <button
@@ -87,7 +87,7 @@ export default function Page() {
 
                 {/* Section content */}
 
-                <div className=" w-full max-w-[1111px] rounded-lg border-[#988C8C] border-[1px] mx-auto mt-[30px] h-[179px] bg-[url('/item-image.svg')] bg-no-repeat bg-center bg-cover flex items-center px-[3%] " >
+                <div className=" w-full  rounded-lg border-[#988C8C] border-[1px] mx-auto mt-[30px] h-[179px] bg-[url('/item-image.svg')] bg-no-repeat bg-center bg-cover flex items-center px-[3%] " >
 
                     <h1 className="font-bold text-2xl md:text-[32px] text-[#ffffff] " >DAO Voter</h1>
 
