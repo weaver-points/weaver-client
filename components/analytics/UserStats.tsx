@@ -32,14 +32,14 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
 
                 <div className="w-full flex items-start gap-10 justify-between " >
 
-                    <div className="w-full basis-1/2 flex flex-col gap-5 " >
+                    <div className="w-full basis-1/2 max-w-[520px] flex flex-col gap-5 " >
 
                         <div className=" flex items-center justify-between gap-5" >
                             <h1 className="font-medium text-5xl text-[#FFFFFF] " >Coiton</h1>
 
                             <div className="flex items-center gap-4" >
-                                <button className="flex items-center justify-center border-[1px] border-[#EBFFCB] p-[13px] rounded-[4px] "><FaEllipsis size={25} /> </button>
-                                <button className="flex items-center justify-center border-[1px] border-[#EBFFCB] p-[13px] rounded-[4px] "><BsTwitterX size={25} /> </button>
+                                <button className="flex items-center justify-center border-[1px] border-[#EBFFCB] p-[13px] rounded-[4px] text-white "><FaEllipsis size={25} /> </button>
+                                <button className="flex items-center justify-center border-[1px] border-[#EBFFCB] p-[13px] rounded-[4px] text-white"><BsTwitterX size={25} /> </button>
                             </div>
                         </div>
 
@@ -61,7 +61,7 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
                     </div>
 
 
-                    <div className=" basis-1/2 flex items-start justify-center gap-6  ">
+                    <div className=" basis-1/2 max-w-[520px] flex items-start justify-center gap-6  ">
 
                         <button className="py-3 px-6 flex items-center justify-center gap-[5px] text-2xl font-bold text-[#70750B] bg-[#EBFFCB] border-[1px] border-[#988C8C] rounded-lg " > <PiPlus /> Follow</button>
 

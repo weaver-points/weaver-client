@@ -1,15 +1,17 @@
-import { BsDiscord, BsGlobe, BsTelegram, BsTwitterX } from "react-icons/bs";
-import UserNav from "./UserNav";
-import UserStats from "./UserStats";
+import AnalyticsSection from "@/components/analytics/AnalyticsSection";
+import { cardData } from "@/components/analytics/data";
+import UserNav from "@/components/analytics/UserNav";
+import UserStats from "@/components/analytics/UserStats";
 import { SocialLinks } from "@/utils/interface";
-import AnalyticsSection from "./AnalyticsSection";
+import { BsDiscord, BsGlobe, BsTelegram, BsTwitterX } from "react-icons/bs";
 
 
 
 
 
 
-export default function AnalyticsOverview() {
+
+export default function Page() {
 
 
     const projectTags: string[] = ["DAO", "NFT", "NFT marketplace"]
@@ -33,24 +35,25 @@ export default function AnalyticsOverview() {
             link: "",
             icon: <BsTwitterX size={20} />
         }
-
-
-
-
     ]
 
 
 
 
+
+
+
+
+
     return (
-        <>
+        <div className="bg-[#111111] pb-5  " >
             <UserNav />
             <UserStats
                 projectTags={projectTags}
                 projectDescription={projectDescription}
                 socialLinks={socialLinks}
             />
-            <AnalyticsSection />
-        </>
+            <AnalyticsSection data={cardData} />
+        </div>
     )
 }

@@ -15,7 +15,7 @@ export default function UserNav() {
 
 
     return (
-        <nav className=" w-full flex items-center justify-between gap-10  px-[4%] py-6 bg-[#232222] border-b border-[#988C8C] " >
+        <nav className=" w-full flex items-center justify-between gap-10  px-[4%] py-6 bg-[#232222] border-b-[1px] border-[#988C8C] " >
 
 
 

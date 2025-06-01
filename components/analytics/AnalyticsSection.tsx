@@ -3,16 +3,27 @@
 import { useState } from "react";
 import HomeSection from "./HomeSection";
 import AnalyticsDisplay from "./AnalyticsDisplay";
+import { CardProps } from "@/utils/interface";
 
-export default function AnalyticsSection() {
+
+
+
+interface AnalyticsSectionProps {
+  data: CardProps[]
+}
+
+
+export default function AnalyticsSection({data}: AnalyticsSectionProps) {
   const [displayedSection, setDisplayedSection] = useState("Home");
+
+
 
   const renderDisplayedSection = () => {
     switch (displayedSection) {
       case "Home":
         return <HomeSection />;
       case "Analytics":
-        return <AnalyticsDisplay />;
+        return <AnalyticsDisplay data={data} />;
       default:
         return null;
     }
