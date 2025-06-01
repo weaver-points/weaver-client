@@ -19,9 +19,9 @@ interface UserStatsProps {
 
 export default function UserStats({ projectTags, projectDescription, socialLinks }: UserStatsProps) {
     return (
-        <section className="py-7 flex flex-col items-start w-full " >
+        <section className="  py-7 flex flex-col items-start w-full " >
 
-            <div className="w-full h-[126px] bg-[#988C8C] " ></div>
+            <div className="w-full h-[126px] bg-[#988C8C] bg-[url('/item-image.svg')] bg-no-repeat bg-cover bg-center " ></div>
 
             <div className=" w-full flex flex-col gap-10 items-start  pl-[10%] px-[4%] " >
 
@@ -30,12 +30,12 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
                 </div>
 
 
-                <div className="w-full flex items-start gap-10 justify-between " >
+                <div className="w-full flex items-start flex-col md:flex-row gap-10 justify-between " >
 
                     <div className="w-full basis-1/2 max-w-[520px] flex flex-col gap-5 " >
 
                         <div className=" flex items-center justify-between gap-5" >
-                            <h1 className="font-medium text-5xl text-[#FFFFFF] " >Coiton</h1>
+                            <h1 className="font-medium text-3xl md:text-5xl text-[#FFFFFF] " >Coiton</h1>
 
                             <div className="flex items-center gap-4" >
                                 <button className="flex items-center justify-center border-[1px] border-[#EBFFCB] p-[13px] rounded-[4px] text-white "><FaEllipsis size={25} /> </button>
@@ -61,20 +61,20 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
                     </div>
 
 
-                    <div className=" basis-1/2 max-w-[520px] flex items-start justify-center gap-6  ">
+                    <div className=" basis-1/2 max-w-[520px] flex items-start flex-col-reverse md:flex-row justify-center gap-6  ">
 
-                        <button className="py-3 px-6 flex items-center justify-center gap-[5px] text-2xl font-bold text-[#70750B] bg-[#EBFFCB] border-[1px] border-[#988C8C] rounded-lg " > <PiPlus /> Follow</button>
+                        <button className="py-3 px-6 flex items-center justify-center gap-[5px] text-lg md:text-2xl font-bold text-[#70750B] bg-[#EBFFCB] border-[1px] border-[#988C8C] rounded-lg " > <PiPlus /> Follow</button>
 
                         <div className=" bg-[#232222] flex items-center justify-center rounded-[10px] gap-6 py-4 px-5 " >
                             <div className="flex flex-col items-start gap-1">
-                                <small className="font-normal text-[#988C8C] text-base  " >Followers</small>
-                                <p className=" text-[#FFFFFF] font-bold text-[22px] " >8,674</p>
+                                <small className="font-normal text-[#988C8C] text-sm md:text-base  " >Followers</small>
+                                <p className=" text-[#FFFFFF] font-bold  text-lg md:text-[22px] " >8,674</p>
                             </div>
 
                             <div className="w-[1px] h-10 bg-gray-400 mx-4"></div>
                             <div className="flex flex-col items-start gap-1">
-                                <small className="font-normal text-[#988C8C] text-base  " >Token</small>
-                                <p className=" text-[#FFFFFF] font-bold text-[22px] " >TGE Upcoming</p>
+                                <small className="font-normal text-[#988C8C] text-sm md:text-base  " >Token</small>
+                                <p className=" text-[#FFFFFF] font-bold text-lg md:text-[22px] " >TGE Upcoming</p>
                             </div>
 
                         </div>

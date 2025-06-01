@@ -37,7 +37,7 @@ export default function Page() {
 
 
     return (
-        <div className="bg-[#111111] pb-10 " >
+        <div className="bg-[#111111] pb-10 font-satoshi  " >
             <UserNav />
             <UserStats
                 projectTags={projectTags}
@@ -89,7 +89,7 @@ export default function Page() {
 
                 <div className=" w-full max-w-[1111px] rounded-lg border-[#988C8C] border-[1px] mx-auto mt-[30px] h-[179px] bg-[url('/item-image.svg')] bg-no-repeat bg-center bg-cover flex items-center px-[3%] " >
 
-                    <h1 className="font-bold text-[32px] text-[#ffffff] " >DAO Voter</h1>
+                    <h1 className="font-bold text-2xl md:text-[32px] text-[#ffffff] " >DAO Voter</h1>
 
                 </div>
 

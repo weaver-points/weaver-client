@@ -46,7 +46,7 @@ export default function Page() {
 
 
     return (
-        <div className="bg-[#111111] pb-5  " >
+        <div className="bg-[#111111] pb-5 font-satoshi  " >
             <UserNav />
             <UserStats
                 projectTags={projectTags}

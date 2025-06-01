@@ -73,7 +73,7 @@ export default function AnalyticsSection({data}: AnalyticsSectionProps) {
       </div>
 
       {/* Section content */}
-      <div className="w-full pt-10 py-5 px-3">{renderDisplayedSection()}</div>
+      <div className="w-full pt-10 py-5 px-1 md:px-3">{renderDisplayedSection()}</div>
     </section>
   );
 }
