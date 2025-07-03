@@ -1,10 +1,19 @@
-import { formatDate } from "@/utils/DateFormatter";
-import { CardProps } from "@/utils/interface";
+"use client";
+
 import Image from "next/image";
-import { User, Circle } from "lucide-react";
+import { Circle, User } from "lucide-react";
+import { formatDate } from "@/utils/DateFormatter";
 
 interface ItemcardProp {
-  data: CardProps;
+  data: {
+    imageSrc: string;
+    title: string;
+    badgeText: string;
+    participantCount: string;
+    startTime: string;
+    endTime: string;
+    isLive: boolean;
+  };
 }
 
 export default function ItemCard({ data }: ItemcardProp) {
