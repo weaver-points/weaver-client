@@ -7,46 +7,31 @@ import { useTheme } from "@/components/ThemeContext";
 function Header() {
     const { theme } = useTheme();
     return (
-        <div>
+        <div className="w-full flex flex-col items-center justify-center">
             <div
-                className={`max-w-[652px] w-full flex flex-col items-center justify-start gap-5 bg-background ${
-                    theme === "dark"
-                        ? "bg-black text-white"
-                        : "bg-white text-black"
-                }`}
+                className="w-full flex flex-col items-center justify-center gap-5 bg-background text-foreground"
             >
-                <div
-                    className={`flex flex-col items-center justify-center gap-7 max-w-[390.17px] max-h-[150px] ${
-                        theme === "dark"
-                            ? "bg-black text-white"
-                            : "bg-white text-black"
-                    }`}
-                >
-                    <Image
-                        src="/weaver.svg"
-                        alt="weaver-logo"
-                        height={100}
-                        width={100}
-                    />
+                <div className="w-full flex flex-col items-center justify-center gap-7">
+                    <div className="w-full flex justify-center items-center">
+                        <Image
+                            src="/weaver.svg"
+                            alt="weaver-logo"
+                            height={100}
+                            width={100}
+                        />
+                    </div>
                     <div
-                        className={`flex flex-row items-center justify-between w-full gap-3 bg-background ${
-                            theme === "dark"
-                                ? "bg-black text-white"
-                                : "bg-white text-black"
-                        }`}
+                        className="flex flex-col items-center justify-center w-full gap-3 bg-background text-foreground"
                     >
                         <Image
                             src="/first-group-image.svg"
                             alt="group-img-for-screen1"
                             height={128}
-                            width={280}
-                            className="w-[210px] h-[85px] "
+                            width={210}
+                            className="w-[210px] h-[85px] mx-auto"
                         />
-                        <p className="text-xl">
-                            <span className="font-light"> Lightweight </span>{" "}
-                            <br />
-                            on-chain identity <br />
-                            platform
+                        <p className="text-xl text-center font-semibold">
+                            Retention campaign
                         </p>
                     </div>
                 </div>
