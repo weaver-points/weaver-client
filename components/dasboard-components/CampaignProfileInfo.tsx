@@ -3,102 +3,79 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 const CampaignProfileInfo = () => {
   return (
-    <div className="flex items-center justify-between">
-      <div className="flex flex-col gap-6">
-        {/* Profile Picture */}
-        <div className="absolute -top-12 left-6">
-          <div className="w-32 h-32 rounded-full mb-8 border-[4.5px] border-white  flex items-center justify-center relative">
+    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 w-full">
+      {/* Avatar and Name */}
+      <div className="flex flex-col md:flex-row md:items-center gap-6 w-full">
+        <div className="relative flex justify-center md:justify-start w-full md:w-auto">
+          <div className="w-32 h-32 rounded-full mb-4 border-[4.5px] border-white dark:border-[#232222] flex items-center justify-center relative shadow-lg bg-white dark:bg-[#181818]">
             <img
-              className="h-[5.5rem] w-[5.5rem] object-cover"
+              className="h-[5.5rem] w-[5.5rem] object-cover rounded-full"
               src="/profile-img.png"
             />
             <img
               src="/verified.png"
               className="absolute -bottom-1 -right-1 w-8 h-8"
             />
-
-            {/* <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-blue-400 border-2 border-black"></div> */}
           </div>
         </div>
-        {/* Profile Actions */}
-        <div className="flex mt-12 items-center gap-12 w-full ">
-          <h2 className="text-5xl font-normal">Coiton</h2>
-          <div className="flex ml-12 gap-2">
+        <div className="flex flex-col items-center md:items-start gap-2 w-full md:w-auto">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-black dark:text-white">Coiton</h2>
+          {/* Tags */}
+          <div className="flex gap-2 flex-wrap mt-2">
+            <Badge className="rounded-md bg-gray-100 text-gray-800 dark:bg-[#232222] dark:text-white py-1.5 px-3 font-normal text-sm hover:bg-gray-200 dark:hover:bg-[#181818]">DAO</Badge>
+            <Badge className="rounded-md bg-gray-100 text-gray-800 dark:bg-[#232222] dark:text-white py-1.5 px-3 font-normal text-sm hover:bg-gray-200 dark:hover:bg-[#181818]">NFT</Badge>
+            <Badge className="rounded-md bg-gray-100 text-gray-800 dark:bg-[#232222] dark:text-white py-1.5 px-3 font-normal text-sm hover:bg-gray-200 dark:hover:bg-[#181818]">NFT marketplace</Badge>
+          </div>
+        </div>
+      </div>
+      {/* Profile Actions and Stats */}
+      <div className="flex flex-col md:items-end gap-4 w-full md:w-auto mt-4 md:mt-0">
+        <div className="flex items-center gap-4">
+          <Button
+            variant="outline"
+            className="rounded-md py-4 px-8 text-lg bg-[#Ebffcb] dark:bg-[#232222] hover:bg-[#e0ffb0] dark:hover:bg-[#181818] text-[#4d4d1a] dark:text-[#Ebffcb] shadow-md border border-[#b6d97a] dark:border-[#232222] font-semibold"
+          >
+            <span className="mr-1">+</span> Follow
+          </Button>
+          <div className="flex ml-2 gap-2">
             <Button
               size="icon"
               variant="outline"
-              className="rounded-md bg-transparent p-6 border-[#e0ffb0]   text-[#988C8C] "
+              className="rounded-md bg-transparent p-4 border-[#e0ffb0] dark:border-[#232222] text-[#988C8C] dark:text-[#Ebffcb] shadow"
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="12" cy="6" r="2" fill="currentColor" />
-                <circle cx="12" cy="12" r="2" fill="currentColor" />
-                <circle cx="12" cy="18" r="2" fill="currentColor" />
-              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="6" r="2" fill="currentColor" /><circle cx="12" cy="12" r="2" fill="currentColor" /><circle cx="12" cy="18" r="2" fill="currentColor" /></svg>
             </Button>
+            {/* X Icon Button */}
             <Button
               size="icon"
               variant="outline"
-              className="rounded-md bg-transparent p-6 border-[#e0ffb0]  text-[#988C8C] "
+              className="rounded-md bg-transparent p-4 border-[#e0ffb0] dark:border-[#232222] shadow"
             >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clipPath="url(#clip0_289_111)">
-                  <mask
-                    id="mask0_289_111"
-                    maskUnits="userSpaceOnUse"
-                    x="0"
-                    y="0"
-                    width="24"
-                    height="24"
-                  >
-                    <path d="M0 0H24V24H0V0Z" fill="white" />
-                  </mask>
-                  <g mask="url(#mask0_289_111)">
-                    <path
-                      d="M18.9 1.12457H22.5806L14.5406 10.3371L24 22.8754H16.5943L10.7897 15.2726L4.15543 22.8754H0.471429L9.07029 13.0183L0 1.12629H7.59429L12.8331 8.07429L18.9 1.12457ZM17.6057 20.6674H19.6457L6.48 3.21772H4.29257L17.6057 20.6674Z"
-                      fill="white"
-                    />
-                  </g>
-                </g>
-                <defs>
-                  <clipPath id="clip0_289_111">
-                    <rect width="24" height="24" fill="white" />
-                  </clipPath>
-                </defs>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 6L14 14M6 14L14 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-gray-700 dark:text-[#Ebffcb]" />
               </svg>
             </Button>
           </div>
         </div>
-        {/* Tags */}
-        <div className="flex gap-3 ">
-          <Badge className="rounded-md bg-[#1E1E1E] py-1.5 px-3 font-normal text-sm  text-white hover:bg-[#232222]">
-            DAO
-          </Badge>
-          <Badge className="rounded-md bg-[#1E1E1E] py-1.5 px-3 font-normal text-sm  text-white hover:bg-[#232222]">
-            NFT
-          </Badge>
-          <Badge className="rounded-md bg-[#1E1E1E] py-1.5 px-3 font-normal text-sm  text-white hover:bg-[#232222]">
-            NFT marketplace
-          </Badge>
+        {/* Stats */}
+        <div className="flex items-center bg-gray-100 text-gray-900 dark:bg-[#232222] dark:text-white py-3 px-8 rounded-md gap-4 text-sm mt-2">
+          <div className="flex flex-col items-start">
+            <div className="text-[#988C8C] dark:text-[#Ebffcb] text-sm">Followers</div>
+            <div className="text-right text-lg font-bold text-gray-900 dark:text-white">8,674</div>
+          </div>
+          <div className="h-8 bg-gray-300 dark:bg-[#232222] w-0.5 mx-4"></div>
+          <div>
+            <div className="text-[#988C8C] dark:text-[#Ebffcb] text-sm">Token</div>
+            <div className="text-right text-lg font-bold text-gray-900 dark:text-white">TGE Upcoming</div>
+          </div>
         </div>
-        {/* Bio */}
-
-        <p className="text-[#988C8C] ">
+      </div>
+      {/* Bio and Social Links */}
+      <div className="w-full mt-6 flex flex-col gap-2">
+        <p className="text-[#988C8C] dark:text-[#Ebffcb] text-base">
           Need a marketplace for your infrastructure? This is the perfect...
         </p>
-        {/* Social Links */}
-        <div className="flex gap-4 items-center text-[#988C8C] mb-6">
+        <div className="flex gap-4 items-center text-[#988C8C] dark:text-[#Ebffcb] mb-2 flex-wrap">
           <svg
             width="24"
             height="24"
@@ -164,28 +141,6 @@ const CampaignProfileInfo = () => {
               />
             </g>
           </svg>
-        </div>
-      </div>
-      <div className="flex items-center gap-6">
-        {/* Follow Button and Stats */}
-        <div className="flex  items-center gap-4 mb-4">
-          <Button
-            variant="outline"
-            className="rounded-md mb-6 py-5 px-8  text-lg bg-[#Ebffcb] hover:bg-[#232222] text-[#70750b]"
-          >
-            <span className="">+</span> Follow
-          </Button>
-          <div className="flex items-center bg-[#232222] py-3 px-8 rounded-md gap-2 text-sm">
-            <div className="flex flex-col items-start">
-              <div className="text-[#988C8C] text-sm">Followers</div>
-              <div className="text-right text-lg font-bold">8,674</div>
-            </div>
-            <div className="h-1/2 bg-white w-0.5 "></div>
-            <div>
-              <div className="text-[#988C8C] text-sm">Token</div>
-              <div className="text-right text-lg font-bold">TGE Upcoming</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

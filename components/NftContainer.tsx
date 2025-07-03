@@ -15,17 +15,15 @@ export default function NftContainer() {
 
     return (
         <div
-            className={`w-full  ${
-                theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-            }`}
+            className={`w-full bg-background text-foreground`}
         >
-            <ul className="flex flex-row items-center gap-8 py-3 border-b border-[#1D1D1D] dark:text-white">
+            <ul className="flex flex-row items-center gap-8 py-3 border-b border-border">
                 <li
                     onClick={() => toggleCurrentNft("TanglerData")}
                     className={`cursor-pointer relative ${
                         currentNFt === "TanglerData"
                             ? "text-green-400 after:absolute after:content-[''] after:h-[1px] after:w-[60px] after:bg-[#9FE870] after:bottom-[-12px] after:left-1/2 after:-translate-x-1/2"
-                            : "text-[#818181]"
+                            : "text-muted-foreground"
                     }`}
                 >
                     Tangler
@@ -35,7 +33,7 @@ export default function NftContainer() {
                     className={`cursor-pointer relative ${
                         currentNFt === "OrbiterData"
                             ? "text-green-400 after:absolute after:content-[''] after:h-[1px] after:w-[60px] after:bg-[#9FE870] after:bottom-[-12px] after:left-1/2 after:-translate-x-1/2"
-                            : "text-[#818181]"
+                            : "text-muted-foreground"
                     }`}
                 >
                     Orbiter
@@ -45,12 +43,12 @@ export default function NftContainer() {
                     className={`cursor-pointer relative ${
                         currentNFt === "FunnelerData"
                             ? "text-green-400 after:absolute after:content-[''] after:h-[1px] after:w-[60px] after:bg-[#9FE870] after:bottom-[-12px] after:left-1/2 after:-translate-x-1/2"
-                            : "text-[#818181]"
+                            : "text-muted-foreground"
                     }`}
                 >
                     Funneler
                 </li>
-                <li className="cursor-pointer text-[#818181]">
+                <li className="cursor-pointer text-muted-foreground">
                     Ekubo-Weaver Badge
                 </li>
             </ul>
