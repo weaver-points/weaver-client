@@ -1,13 +1,13 @@
-import { IoMdClose } from "react-icons/io";
-import { FaChevronDown, FaTelegramPlane } from "react-icons/fa";
-import { FaXTwitter, FaDiscord } from "react-icons/fa6";
-import { FiGithub } from "react-icons/fi";
+import { X } from "lucide-react";
+import { ChevronDown, Send } from "lucide-react";
+import { Twitter, MessageCircle } from "lucide-react";
+import { Github } from "lucide-react";
 
 export {
-  IoMdClose,
-  FaChevronDown,
-  FaTelegramPlane,
-  FaXTwitter,
-  FaDiscord,
-  FiGithub,
+  X as IoMdClose,
+  ChevronDown as FaChevronDown,
+  Send as FaTelegramPlane,
+  Twitter as FaXTwitter,
+  MessageCircle as FaDiscord,
+  Github as FiGithub,
 };

@@ -9,7 +9,7 @@ import {
   SwiperProps,
 } from "swiper/react";
 import { useState, useRef } from "react";
-import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import "swiper/css";
 import OnboardScreen1 from "@/components/onboarding-screens/Screen1";
 import OnboardScreen2 from "@/components/onboarding-screens/Screen2";
@@ -73,15 +73,13 @@ export default function Onboard() {
         spaceBetween={50}
         slidesPerView={1}
         loop={false}
-        className="h-screen w-full"
-      >
+        className="h-screen w-full">
         {onBoardSlides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
               className={`h-screen w-full md:flex justify-center items-center ${
                 theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-              }`}
-            >
+              }`}>
               {slide}
             </div>
           </SwiperSlide>
@@ -95,9 +93,8 @@ export default function Onboard() {
           <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
-            aria-label="Previous slide"
-          >
-            <HiOutlineChevronLeft size={30} />
+            aria-label="Previous slide">
+            <ChevronLeft size={30} />
           </button>
 
           {/* Right navigation button (hidden on the last slide) */}
@@ -105,9 +102,8 @@ export default function Onboard() {
             <button
               onClick={() => swiperRef.current?.slideNext()}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition z-10"
-              aria-label="Next slide"
-            >
-              <HiOutlineChevronRight size={30} />
+              aria-label="Next slide">
+              <ChevronRight size={30} />
             </button>
           )}
         </>

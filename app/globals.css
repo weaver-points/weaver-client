@@ -83,7 +83,8 @@ body {
     --radius: 0.5rem;
   }
 
-  .dark, [data-theme="dark"] {
+  .dark,
+  [data-theme="dark"] {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
@@ -119,4 +120,21 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Additional theme debugging and fallback styles */
+.dark-theme {
+  background-color: hsl(0 0% 3.9%);
+  color: hsl(0 0% 98%);
+}
+
+.light-theme {
+  background-color: hsl(0 0% 100%);
+  color: hsl(0 0% 3.9%);
+}
+
+/* Ensure theme transitions are smooth */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
