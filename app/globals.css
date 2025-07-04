@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background-color: #0d0d0d;
-  --text-color: #ffffff;
-}
-
-[data-theme="light"] {
-  --background-color: #ffffff;
-  --text-color: #000000;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-weight: 400;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -57,7 +41,7 @@ body {
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 0 0% 10%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
