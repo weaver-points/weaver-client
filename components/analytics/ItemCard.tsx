@@ -52,10 +52,10 @@ export default function ItemCard({ data }: ItemcardProp) {
           <div className="px-6 py-6 flex items-center justify-between gap-10 h-[36%]">
             <div className="flex flex-col items-start gap-1">
               <h3 className="text-sm md:text-lg font-medium text-foreground">
-                {formatDate(data.startTime)}
+                {formatDate(new Date(data.startTime))}
               </h3>
               <p className="text-muted-foreground text-xs md:text-sm font-medium">
-                to {formatDate(data.endTime)}
+                to {formatDate(new Date(data.endTime))}
               </p>
             </div>
 
