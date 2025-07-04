@@ -36,7 +36,7 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
                         </div>
                         <div className="flex w-fit items-center gap-2">
                             {projectTags.map((tag, index) => (
-                                <span key={index} className="rounded-[4px] bg-border py-1 px-2 text-base font-normal text-foreground">{tag}</span>
+                                <span key={index} className="rounded-[4px] bg-secondary py-1 px-2 text-base font-normal text-foreground">{tag}</span>
                             ))}
                         </div>
                         <p className="text-lg font-normal text-[#988C8C]">{projectDescription}</p>
@@ -48,7 +48,7 @@ export default function UserStats({ projectTags, projectDescription, socialLinks
                     </div>
                     <div className="basis-1/2 max-w-[520px] flex items-start flex-col-reverse md:flex-row justify-center gap-6">
                         <button className="py-3 px-6 flex items-center justify-center gap-[5px] text-lg md:text-2xl font-bold text-[#70750B] bg-[#EBFFCB] border border-border rounded-lg hover:scale-95 duration-150 ease-in-out"><PiPlus /> Follow</button>
-                        <div className="bg-border flex items-center justify-center rounded-[10px] gap-6 py-4 px-5">
+                        <div className="bg-secondary flex items-center justify-center rounded-[10px] gap-6 py-4 px-5">
                             <div className="flex flex-col items-start gap-1">
                                 <small className="font-normal text-[#988C8C] text-sm md:text-base">Followers</small>
                                 <p className="text-foreground font-bold text-lg md:text-[22px]">8,674</p>
